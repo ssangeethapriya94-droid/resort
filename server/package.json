@@ -1,0 +1,9 @@
+{
+  "name": "sai-ranga-shores-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny dependency-free Node API + static file server for the Sai Ranga Shores website",
+  "scripts": { "start": "node index.js", "dev": "node --watch index.js" },
+  "engines": { "node": ">=18" }
+}

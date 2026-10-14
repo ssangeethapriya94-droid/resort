@@ -1,0 +1,219 @@
+[
+  {
+    "slug": "image-1",
+    "origFile": "image 1.jpg",
+    "w": 970,
+    "h": 1280,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0047-effects",
+    "origFile": "IMG_0047-EFFECTS.jpg",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0094",
+    "origFile": "IMG_0094 - Copy.HEIC",
+    "w": 9714,
+    "h": 3874,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0095",
+    "origFile": "IMG_0095.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0113",
+    "origFile": "IMG_0113.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0125",
+    "origFile": "IMG_0125.HEIC",
+    "w": 3896,
+    "h": 5620,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0232",
+    "origFile": "IMG_0232.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0243",
+    "origFile": "IMG_0243.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0250",
+    "origFile": "IMG_0250.HEIC",
+    "w": 2377,
+    "h": 4029,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0251",
+    "origFile": "IMG_0251.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0252",
+    "origFile": "IMG_0252.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0254",
+    "origFile": "IMG_0254.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0292",
+    "origFile": "IMG_0292.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-0330",
+    "origFile": "IMG_0330 - Copy.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0331",
+    "origFile": "IMG_0331.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0406",
+    "origFile": "IMG_0406.HEIC",
+    "w": 1744,
+    "h": 1308,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0409",
+    "origFile": "IMG_0409.HEIC",
+    "w": 1390,
+    "h": 1230,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0411",
+    "origFile": "IMG_0411.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-0414",
+    "origFile": "IMG_0414.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-2784",
+    "origFile": "IMG_2784.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-3413",
+    "origFile": "IMG_3413.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-4291",
+    "origFile": "IMG_4291.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-4872",
+    "origFile": "IMG_4872.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-4888",
+    "origFile": "IMG_4888.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-4941",
+    "origFile": "IMG_4941.HEIC",
+    "w": 13996,
+    "h": 3798,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-4942",
+    "origFile": "IMG_4942.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-4943",
+    "origFile": "IMG_4943.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-8755",
+    "origFile": "IMG_8755.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-9141",
+    "origFile": "IMG_9141.HEIC",
+    "w": 3024,
+    "h": 4032,
+    "isPortrait": true
+  },
+  {
+    "slug": "img-9382-effects",
+    "origFile": "IMG_9382-EFFECTS.jpg",
+    "w": 3936,
+    "h": 3081,
+    "isPortrait": false
+  },
+  {
+    "slug": "img-9386",
+    "origFile": "IMG_9386.HEIC",
+    "w": 4032,
+    "h": 3024,
+    "isPortrait": false
+  }
+]
