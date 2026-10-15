@@ -10,11 +10,9 @@ export const SITE = {
   tagline: 'Dancing with waves',
 
   // WhatsApp number in international format, digits only (91 + 10 digits).
-  // TODO: confirm which number the client wants bookings on.
-  whatsapp: '919789688048',
+  whatsapp: '919940038363',
   phones: [
-    { label: 'Sankar', display: '+91 97896 88048', tel: '+919789688048' },
-    { label: 'Divya', display: '+91 97912 96043', tel: '+919791296043' },
+    { label: '', display: '+91 99400 38363', tel: '+919940038363' },
   ],
   // TODO: add the client's real email; the contact card hides it while empty.
   email: '',

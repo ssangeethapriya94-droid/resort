@@ -80,7 +80,7 @@ Tip: a golden-hour clip of the sea shot with a steady phone (10 to 20 seconds) w
 
 | Item | Where |
 |---|---|
-| Which WhatsApp number receives bookings (currently Sankar 97896 88048) | `SITE.whatsapp` |
+| Which WhatsApp number receives bookings (confirmed: 99400 38363) | `SITE.whatsapp` |
 | Exact address and Google Maps pin (currently "Beachfront, near Pondicherry" and a Maps *search* link) | `SITE.addressLine`, `SITE.mapsUrl` |
 | E-mail address | `SITE.email` |
 | Real logo (the wave mark in `components/Logo.jsx` is a placeholder) | `components/Logo.jsx` |

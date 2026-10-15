@@ -88,11 +88,8 @@ export default function Footer() {
                 <div className="footer-contact-item">
                   <Icon name="phone" size={15} className="footer-contact-ico" />
                   <div>
-                    <a href="tel:+919789688048" className="footer-contact-val">
-                      +91 97896 88048 <small>(Sankar)</small>
-                    </a>
-                    <a href="tel:+919791296043" className="footer-contact-val">
-                      +91 97912 96043 <small>(Divya)</small>
+                    <a href="tel:+919940038363" className="footer-contact-val">
+                      +91 99400 38363
                     </a>
                   </div>
                 </div>

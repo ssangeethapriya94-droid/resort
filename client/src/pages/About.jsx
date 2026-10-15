@@ -126,7 +126,7 @@ export default function About() {
             <div className="cta-ocean-btns">
               <a
                 className="btn btn--whatsapp"
-                href={waLink('Hello Sankar and Divya! I would like to plan a stay at Sai Ranga Shores.')}
+                href={waLink('Hello Sai Ranga Shores! I would like to plan a stay.')}
                 target="_blank"
                 rel="noreferrer"
               >

@@ -68,28 +68,16 @@ export default function Contact() {
 
               {/* Contact Direct Items */}
               <div className="contact-info-body">
-                {/* Phone 1: Sankar */}
-                <a href="tel:+919789688048" className="contact-info-item">
+                {/* Phone */}
+                <a href="tel:+919940038363" className="contact-info-item">
                   <div className="contact-icon-badge">
                     <Icon name="phone" size={18} />
                   </div>
                   <div className="contact-item-details">
-                    <span className="contact-item-val">+91 97896 88048</span>
-                    <span className="contact-item-sub">Sankar</span>
+                    <span className="contact-item-val">+91 99400 38363</span>
                   </div>
                   <div className="contact-item-flourish" aria-hidden="true">
                     <WaveRipple color="#7DC3E2" />
-                  </div>
-                </a>
-
-                {/* Phone 2: Divya */}
-                <a href="tel:+919791296043" className="contact-info-item">
-                  <div className="contact-icon-badge">
-                    <Icon name="phone" size={18} />
-                  </div>
-                  <div className="contact-item-details">
-                    <span className="contact-item-val">+91 97912 96043</span>
-                    <span className="contact-item-sub">Divya</span>
                   </div>
                 </a>
 
