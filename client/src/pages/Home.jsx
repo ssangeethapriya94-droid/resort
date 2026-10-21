@@ -38,7 +38,7 @@ export default function Home() {
             </h2>
 
             <p className="home-about-lead">
-              Sai Ranga Shores Beach Home is a peaceful beach resort in Pondicherry nestled along the quiet coastline. Designed for travelers seeking an authentic beachfront resort in Pondicherry, a private beach house in Pondicherry, or a relaxing Pondicherry beach stay, our property offers spacious sea view rooms, warm homestyle hospitality, and direct steps to virgin sands.
+              Sai Ranga Shores Beach Home is a peaceful beach resort near Pondicherry on ECR nestled along the quiet coastline. Designed for travelers seeking an authentic beachfront resort near Pondicherry on ECR, a private beach house near Pondicherry on ECR, or a relaxing coastal beach stay, our property offers spacious sea view rooms, warm homestyle hospitality, and direct steps to virgin sands.
             </p>
 
             {/* 4 Interactive Feature Highlights */}
@@ -227,10 +227,10 @@ export default function Home() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="home-eyebrow">— PONDICHERRY BEACH STAY —</p>
+              <p className="home-eyebrow">— COASTAL BEACH STAY ON ECR —</p>
               <h2 className="home-section-title">Sea View Rooms &amp; Suites</h2>
               <p className="home-section-sub">
-                Thoughtfully designed sea view rooms in Pondicherry with modern amenities and stunning ocean vistas.
+                Thoughtfully designed sea view rooms near Pondicherry on ECR with modern amenities and stunning ocean vistas.
               </p>
             </div>
             <Link to="/stay" className="home-section-link">

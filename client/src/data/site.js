@@ -17,7 +17,7 @@ export const SITE = {
   // TODO: add the client's real email; the contact card hides it while empty.
   email: '',
   // TODO: replace with the exact address once the client confirms it.
-  addressLine: 'Beachfront, near Pondicherry',
+  addressLine: 'Beachfront, near Pondicherry on ECR',
   // Verified Google Maps pin location
   mapsUrl: 'https://maps.google.com/maps?q=12.3083674%2C80.0370708&z=17&hl=en',
   instagram: '',
@@ -182,7 +182,7 @@ export const GALLERY = [
   // 3. Sea & Beach
   { name: 'img-0094', cat: 'Sea & Beach', alt: 'Pondicherry beach resort photos: sweeping coastline with fishing boats and waves' },
   { name: 'img-0414', cat: 'Sea & Beach', alt: 'Coastal motorboat excursion ride across the blue sea in Pondicherry' },
-  { name: 'img-0411', cat: 'Sea & Beach', alt: 'Catamaran boat cruising through coastal waves near Pondicherry beach' },
+  { name: 'img-0411', cat: 'Sea & Beach', alt: 'Catamaran boat cruising through coastal waves near Pondicherry on ECR' },
   { name: 'img-0113', cat: 'Sea & Beach', alt: 'Gentle ocean waves rolling onto quiet beach in Pondicherry' },
   { name: 'img-0406', cat: 'Sea & Beach', alt: 'Coastal seabird gliding above gentle ocean waves' },
   { name: 'img-0409', cat: 'Sea & Beach', alt: 'Seagulls soaring over the azure coastline' },
@@ -195,7 +195,7 @@ export const GALLERY = [
   { name: 'img-3413', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise photos: morning dawn reflecting on sea through palm canopy' },
   { name: 'img-0330', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise view: golden sunbeams breaking through morning sea clouds' },
   { name: 'img-0331', cat: 'Sunrise & Sunset', alt: 'Radiant morning sun rays over the Bay of Bengal ocean horizon' },
-  { name: 'img-2784', cat: 'Sunrise & Sunset', alt: 'Golden hour sunset over sand dunes and shoreline boat near Pondicherry' },
+  { name: 'img-2784', cat: 'Sunrise & Sunset', alt: 'Golden hour sunset over sand dunes and shoreline boat near Pondicherry on ECR' },
   { name: 'img-4888', cat: 'Sunrise & Sunset', alt: 'Evening sunset glow over coastal coconut palm canopy' },
   { name: 'sunrise-sea', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise photos: golden dawn rising over the Bay of Bengal' },
   { name: 'sunset-dunes', cat: 'Sunrise & Sunset', alt: 'Dusk turning to embers over the coastal dunes' },

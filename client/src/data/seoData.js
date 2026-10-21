@@ -12,9 +12,9 @@ export const BUSINESS_INFO = {
   displayPhone: '+91 99400 38363',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Beachfront, near Pondicherry',
-    addressLocality: 'Pondicherry',
-    addressRegion: 'Pondicherry',
+    streetAddress: 'Beachfront, near Pondicherry on ECR',
+    addressLocality: 'Pondicherry / ECR',
+    addressRegion: 'Tamil Nadu / Pondicherry',
     postalCode: '605014',
     addressCountry: 'IN',
   },
@@ -35,18 +35,19 @@ export const BUSINESS_INFO = {
 
 export const SEO_PAGES = {
   '/': {
-    title: 'Beach Resort in Pondicherry | Sai Ranga Shores Beach Home',
+    title: 'Beach Resort Near Pondicherry on ECR | Sai Ranga Shores Beach Home',
     description:
-      'Experience a peaceful beach resort in Pondicherry at Sai Ranga Shores. Enjoy beachfront stays, panoramic sea view rooms, rooftop horizons & warm hospitality.',
+      'Experience a peaceful beach resort near Pondicherry on ECR at Sai Ranga Shores. Enjoy beachfront stays, panoramic sea view rooms, rooftop horizons & warm hospitality.',
     canonical: `${SITE_URL}/`,
     ogImage: `${SITE_URL}/img/hero-sunset-1280.webp`,
     ogType: 'website',
-    primaryKeyword: 'Beach resort in Pondicherry',
+    primaryKeyword: 'Beach resort near Pondicherry on ECR',
     supportingKeywords: [
-      'Beachfront resort in Pondicherry',
-      'Beach house in Pondicherry',
+      'Beach resort in Pondicherry',
+      'Beachfront resort near Pondicherry on ECR',
+      'Resorts on ECR near Pondicherry',
+      'Beach house near Pondicherry on ECR',
       'Pondicherry beach stay',
-      'Best beach resort in Pondicherry',
       'Sea view resort Pondicherry',
     ],
     schema: {
@@ -57,7 +58,7 @@ export const SEO_PAGES = {
           '@id': `${SITE_URL}/#resort`,
           name: BUSINESS_INFO.name,
           description:
-            'A tranquil beach resort and coastal retreat in Pondicherry featuring sea view rooms, a 360° observation tower pavilion, and direct beach access.',
+            'A tranquil beach resort and coastal retreat near Pondicherry on ECR featuring sea view rooms, a 360° observation tower pavilion, and direct beach access.',
           url: `${SITE_URL}/`,
           telephone: BUSINESS_INFO.telephone,
           priceRange: BUSINESS_INFO.priceRange,
@@ -282,7 +283,7 @@ export const SEO_PAGES = {
           url: `${SITE_URL}/about`,
           name: 'About Sai Ranga Shores Beach Home Pondicherry',
           description:
-            'The story and vision behind Sai Ranga Shores Beach Home, a peaceful seaside retreat and coastal homestay near Pondicherry.',
+            'The story and vision behind Sai Ranga Shores Beach Home, a peaceful seaside retreat and coastal homestay near Pondicherry on ECR.',
           mainEntity: {
             '@type': 'LodgingBusiness',
             name: BUSINESS_INFO.name,

@@ -29,7 +29,7 @@ export default function Contact() {
               Contact Sai Ranga Shores <span className="script">Beach Home</span>
             </h1>
             <p className="contact-hero-sub">
-              Planning your beach stay in Pondicherry or have questions about our sea view rooms, rates, or location? Get in touch with our team directly.
+              Planning your beach stay near Pondicherry on ECR or have questions about our sea view rooms, rates, or location? Get in touch with our team directly.
             </p>
 
             {/* Handwritten Note with Curved Arrow & Wave Doodle */}
@@ -86,8 +86,8 @@ export default function Contact() {
                     <Icon name="pin" size={18} />
                   </div>
                   <div className="contact-item-details">
-                    <span className="contact-item-val">Beachfront, near Pondicherry</span>
-                    <span className="contact-item-sub">Pondicherry, India</span>
+                    <span className="contact-item-val">Beachfront, near Pondicherry on ECR</span>
+                    <span className="contact-item-sub">ECR, Tamil Nadu / Pondicherry Coast, India</span>
                   </div>
                 </div>
 
@@ -205,9 +205,9 @@ export default function Contact() {
             {/* Left Content */}
             <div className="contact-loc-info">
               <span className="contact-loc-eyebrow">OUR LOCATION</span>
-              <h2 className="contact-loc-title">Find Us Near Pondicherry</h2>
+              <h2 className="contact-loc-title">Find Us Near Pondicherry on ECR</h2>
               <p className="contact-loc-desc">
-                Sai Ranga Shores is perfectly located near Pondicherry, offering easy access to
+                Sai Ranga Shores is perfectly located near Pondicherry on ECR, offering easy access to
                 beaches, local attractions and a peaceful coastal retreat.
               </p>
               <a
@@ -319,7 +319,7 @@ export default function Contact() {
                   <span className="contact-perk-ico">
                     <Icon name="car" size={17} />
                   </span>
-                  <span>Near Pondicherry</span>
+                  <span>Near Pondicherry on ECR</span>
                 </li>
                 <li>
                   <span className="contact-perk-ico">

@@ -146,13 +146,13 @@ export default function Stay() {
 
         <div className="container stay-hero-container">
           <div className="stay-hero-content">
-            <span className="stay-hero-eyebrow">— COASTAL ACCOMMODATIONS IN PONDICHERRY —</span>
+            <span className="stay-hero-eyebrow">— COASTAL ACCOMMODATIONS NEAR PONDICHERRY ON ECR —</span>
             <h1 className="stay-hero-heading">
               Sea View Rooms
-              <span className="stay-hero-heading-sub">in Pondicherry</span>
+              <span className="stay-hero-heading-sub">near Pondicherry on ECR</span>
             </h1>
             <p className="stay-hero-subtext">
-              Wake up to panoramic ocean views, soothing surf, and gentle sea breezes. Explore our spacious rooms near the beach in Pondicherry at Sai Ranga Shores.
+              Wake up to panoramic ocean views, soothing surf, and gentle sea breezes. Explore our spacious rooms near the beach on ECR, near Pondicherry at Sai Ranga Shores.
             </p>
             <a
               href={waLink('Hello Sai Ranga Shores! I would like to enquire about room booking and availability.')}
@@ -236,7 +236,7 @@ export default function Stay() {
             <span className="stay-eyebrow-accent">— OUR ACCOMMODATIONS —</span>
             <h2 className="stay-rooms-title">Deluxe Rooms, Suites &amp; Family Beach Stays</h2>
             <p className="stay-rooms-desc">
-              Whether you are looking for a deluxe sea view room in Pondicherry, a suite room in Pondicherry, or a family room at our Pondicherry beach resort, our accommodations provide the ideal beach house for family and leisure stays.
+              Whether you are looking for a deluxe sea view room near Pondicherry on ECR, a suite room on ECR, or a family room at our coastal beach resort, our accommodations provide the ideal beach house for family and leisure stays.
             </p>
           </Reveal>
 
