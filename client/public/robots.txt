@@ -1,0 +1,11 @@
+# robots.txt for Sai Ranga Shores Beach Home
+# Website: https://sai-rangashores.vercel.app
+
+User-agent: *
+Allow: /
+
+# Disallow API and server endpoints
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://sai-rangashores.vercel.app/sitemap.xml

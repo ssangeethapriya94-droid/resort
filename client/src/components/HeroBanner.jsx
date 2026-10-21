@@ -106,7 +106,7 @@ export default function HeroBanner() {
         <div className="hero-modern-grid">
           {/* Left Column: Heading, Cursive Title, Description & Button */}
           <div className="hero-modern-left">
-            <p className="hero-eyebrow">— A COASTAL ESCAPE IN PONDICHERRY —</p>
+            <p className="hero-eyebrow">— BEACHFRONT RESORT IN PONDICHERRY —</p>
 
             <h1 id="hero-title" className="hero-main-title">
               <span>Sai Ranga Shores</span>
@@ -117,7 +117,7 @@ export default function HeroBanner() {
             </h1>
 
             <p className="hero-main-desc">
-              Wake up to the sound of waves, enjoy warm hospitality and create unforgettable memories at our beachfront resort in Pondicherry.
+              Wake up to the sound of waves, enjoy warm hospitality and create unforgettable memories at our beach resort in Pondicherry. Experience a peaceful seaside beach house retreat just steps from virgin sands.
             </p>
 
             <div className="hero-cta-wrap">

@@ -24,13 +24,12 @@ export default function Contact() {
         <div className="container contact-hero-container">
           {/* Top Header Content */}
           <div className="contact-hero-header">
-            <span className="contact-hero-eyebrow">— CONTACT US —</span>
+            <span className="contact-hero-eyebrow">— CONTACT &amp; RESERVATIONS —</span>
             <h1 className="contact-hero-title">
-              We'd Love to <span className="script">Hear from You</span>
+              Contact Sai Ranga Shores <span className="script">Beach Home</span>
             </h1>
             <p className="contact-hero-sub">
-              Whether you have a question, special request or need assistance with your stay, we're
-              here to help. Reach out and we'll get back to you soon.
+              Planning your beach stay in Pondicherry or have questions about our sea view rooms, rates, or location? Get in touch with our team directly.
             </p>
 
             {/* Handwritten Note with Curved Arrow & Wave Doodle */}

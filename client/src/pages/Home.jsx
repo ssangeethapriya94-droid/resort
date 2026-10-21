@@ -38,7 +38,7 @@ export default function Home() {
             </h2>
 
             <p className="home-about-lead">
-              Sai Ranga Shores Beach Home is a serene beachfront retreat nestled along the golden coastline of Pondicherry. Designed for those seeking pure privacy, comfort and coastal serenity, our property offers spacious rooms, warm hospitality and direct steps to virgin sands.
+              Sai Ranga Shores Beach Home is a peaceful beach resort in Pondicherry nestled along the quiet coastline. Designed for travelers seeking an authentic beachfront resort in Pondicherry, a private beach house in Pondicherry, or a relaxing Pondicherry beach stay, our property offers spacious sea view rooms, warm homestyle hospitality, and direct steps to virgin sands.
             </p>
 
             {/* 4 Interactive Feature Highlights */}
@@ -227,10 +227,10 @@ export default function Home() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="home-eyebrow">— STAY IN COMFORT —</p>
-              <h2 className="home-section-title">Our Rooms</h2>
+              <p className="home-eyebrow">— PONDICHERRY BEACH STAY —</p>
+              <h2 className="home-section-title">Sea View Rooms &amp; Suites</h2>
               <p className="home-section-sub">
-                Thoughtfully designed rooms with modern amenities and stunning sea views.
+                Thoughtfully designed sea view rooms in Pondicherry with modern amenities and stunning ocean vistas.
               </p>
             </div>
             <Link to="/stay" className="home-section-link">
@@ -333,8 +333,8 @@ export default function Home() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="home-eyebrow">— LOCAL EXPERIENCES —</p>
-              <h2 className="home-section-title">Explore the charm of Pondicherry</h2>
+              <p className="home-eyebrow">— THINGS TO DO IN PONDICHERRY —</p>
+              <h2 className="home-section-title">Explore Coastal &amp; Heritage Experiences</h2>
             </div>
             <Link to="/experiences" className="home-section-link">
               View All Experiences <Icon name="arrow" size={15} />

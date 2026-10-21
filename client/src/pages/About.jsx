@@ -19,12 +19,12 @@ export default function About() {
         script="Beach Home"
         image={
           <div className="phead-bg">
-            <Img name="tower" alt="Sai Ranga Shores Beach Home" sizes="100vw" eager />
+            <Img name="tower" alt="Sai Ranga Shores Beach Home Pondicherry viewing tower" sizes="100vw" eager />
             <div className="phead-shade" />
           </div>
         }
       >
-        A tranquil beachfront sanctuary near Pondicherry, created for travelers seeking comfort, privacy and the soothing rhythm of the waves.
+        A peaceful beach retreat and coastal escape in Pondicherry, created for travelers seeking comfort, privacy and the soothing rhythm of the waves.
       </PageHeader>
 
       {/* Story Section */}
@@ -36,10 +36,10 @@ export default function About() {
               Where Hospitality Meets <span className="home-script-title">the Ocean<ScribbleUnderline /></span>
             </h2>
             <p className="home-about-desc">
-              Nestled along the pristine, quiet coastline near Pondicherry, Sai Ranga Shores Beach Home was born from a simple desire: to create a peaceful coastal haven where guests can unplug from the bustle of city life and reconnect with the simple joys of the sea.
+              Nestled along the quiet coastline near Pondicherry, Sai Ranga Shores Beach Home is a relaxing beach home in Pondicherry created for those who cherish ocean serenity. Designed as a peaceful beach retreat in Pondicherry, our property gives guests an authentic beachfront homestay experience where you can unplug from city rush and reconnect with nature.
             </p>
             <p className="home-about-desc">
-              Whether you are watching the golden sunrise over the Bay of Bengal from our rooftop pavilion, walking barefoot on the sand just steps from your room, or enjoying a slow evening under a star-filled coastal sky, our beach home offers a warm, personal retreat that feels just like home.
+              Whether you are watching the golden sunrise over the Bay of Bengal from our rooftop observation pavilion, enjoying tranquil barefoot beach walks just steps from your room, or relaxing in our comfortable sea-view suites, Sai Ranga Shores Pondicherry offers a warm coastal escape that feels just like home.
             </p>
             <div className="about-hosts-card">
               <div className="about-hosts-avatar">

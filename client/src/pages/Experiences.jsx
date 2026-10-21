@@ -22,17 +22,17 @@ export default function Experiences() {
   return (
     <div className="experiences-page">
       <PageHeader
-        eyebrow="Local attractions"
-        title="Explore Pondicherry"
-        script="Beyond the Beach"
+        eyebrow="Sightseeing &amp; Activities"
+        title="Things to Do in Pondicherry"
+        script="&amp; Coastal Experiences"
         image={
           <div className="phead-bg">
-            <Img name="beach-pano" alt="" sizes="100vw" eager />
+            <Img name="beach-pano" alt="Beach walks in Pondicherry along coastal shoreline" sizes="100vw" eager />
             <div className="phead-shade" />
           </div>
         }
       >
-        From the shore at your doorstep to serene places around Pondicherry, discover the best experiences near Sai Ranga Shores.
+        Discover top things to do in Pondicherry—from quiet beach walks and early Pondicherry sunrise views at our doorstep to French Quarter heritage walks, scenic coastal boating, and authentic local food and markets.
       </PageHeader>
 
       {/* ──────────────────────────────────────────────────────────
@@ -46,12 +46,12 @@ export default function Experiences() {
           {/* Header Row with Title, Handwritten Annotation, and Slider Navigation Arrows */}
           <div className="exp-showcase-header">
             <div className="exp-showcase-heading-group">
-              <span className="exp-showcase-eyebrow">— EXPERIENCE —</span>
+              <span className="exp-showcase-eyebrow">— COASTAL &amp; CULTURAL ACTIVITIES —</span>
               <h2 className="exp-showcase-title">
-                Moments you will <span className="script">keep</span>
+                Memorable Experiences in <span className="script">Pondicherry</span>
               </h2>
               <p className="exp-showcase-intro">
-                From peaceful beach walks to local experiences, Sai Ranga Shores is the perfect base to explore the natural beauty and culture of the region.
+                From peaceful beach walks and golden sunrise views to local heritage explorations, Sai Ranga Shores provides an ideal coastal retreat to enjoy the finest things to do in Pondicherry.
               </p>
             </div>
 
