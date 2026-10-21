@@ -18,8 +18,8 @@ export const SITE = {
   email: '',
   // TODO: replace with the exact address once the client confirms it.
   addressLine: 'Beachfront, near Pondicherry on ECR',
-  // Verified Google Maps pin location
-  mapsUrl: 'https://maps.google.com/maps?q=12.3083674%2C80.0370708&z=17&hl=en',
+  // Verified Google Maps Business Profile location
+  mapsUrl: 'https://www.google.com/maps/place/SaiRanga+Shores+Beach+Home/@12.3084739,80.0358302,19z/data=!3m1!4b1!4m6!3m5!1s0x3a530b0012a376a7:0x15dd3efa0c3c1974!8m2!3d12.3084739!4d80.0370479!16s%2Fg%2F11ywb53c54?hl=en',
   instagram: '',
   facebook: '',
 };

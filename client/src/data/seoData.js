@@ -20,8 +20,8 @@ export const BUSINESS_INFO = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 12.3083674,
-    longitude: 80.0370708,
+    latitude: 12.3084739,
+    longitude: 80.0370479,
   },
   priceRange: '₹3,500 - ₹7,500',
   currenciesAccepted: 'INR',
@@ -30,7 +30,8 @@ export const BUSINESS_INFO = {
   checkoutTime: '11:00',
   image: `${SITE_URL}/img/hero-sunset-1280.webp`,
   logo: `${SITE_URL}/favicon.svg`,
-  mapsUrl: 'https://maps.google.com/maps?q=12.3083674%2C80.0370708&z=17&hl=en',
+  mapsUrl:
+    'https://www.google.com/maps/place/SaiRanga+Shores+Beach+Home/@12.3084739,80.0358302,19z/data=!3m1!4b1!4m6!3m5!1s0x3a530b0012a376a7:0x15dd3efa0c3c1974!8m2!3d12.3084739!4d80.0370479!16s%2Fg%2F11ywb53c54?hl=en',
 };
 
 export const SEO_PAGES = {
