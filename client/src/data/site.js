@@ -18,8 +18,8 @@ export const SITE = {
   email: '',
   // TODO: replace with the exact address once the client confirms it.
   addressLine: 'Beachfront, near Pondicherry',
-  // Opens a Google Maps SEARCH (no invented pin). Replace with the real share link when known.
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sai+Ranga+Shores+Beach+Home+Pondicherry',
+  // Verified Google Maps pin location
+  mapsUrl: 'https://maps.google.com/maps?q=12.3083674%2C80.0370708&z=17&hl=en',
   instagram: '',
   facebook: '',
 };

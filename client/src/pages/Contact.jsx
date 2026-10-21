@@ -222,8 +222,15 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* Middle Stylized Coastline Map Graphic */}
-            <div className="contact-loc-map-wrap">
+            {/* Middle Stylized Coastline Map Graphic (Clickable to Google Maps) */}
+            <a
+              href={SITE.mapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="contact-loc-map-wrap"
+              title="Open Sai Ranga Shores on Google Maps"
+              aria-label="Open Sai Ranga Shores on Google Maps (opens in a new tab)"
+            >
               <svg
                 viewBox="0 0 340 220"
                 className="contact-loc-map-svg"
@@ -303,7 +310,7 @@ export default function Contact() {
                   <span>Beachfront Stay</span>
                 </div>
               </div>
-            </div>
+            </a>
 
             {/* Right Highlights & Visual Signpost Photo */}
             <div className="contact-loc-perks-wrap">
@@ -356,6 +363,37 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Interactive Google Map Embed Card */}
+          <div className="contact-embed-map-card">
+            <div className="contact-embed-map-header">
+              <div className="contact-embed-map-title-wrap">
+                <Icon name="pin" size={18} />
+                <span>Live Location Pin & Directions</span>
+              </div>
+              <a
+                href={SITE.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="contact-embed-map-open-link"
+              >
+                <span>Open in Google Maps App</span>
+                <Icon name="arrow" size={13} />
+              </a>
+            </div>
+            <div className="contact-embed-map-frame-wrap">
+              <iframe
+                src="https://maps.google.com/maps?q=12.3083674,80.0370708&hl=en&z=16&output=embed"
+                width="100%"
+                height="380"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Sai Ranga Shores Beach Home Google Map Location"
+              />
             </div>
           </div>
         </div>

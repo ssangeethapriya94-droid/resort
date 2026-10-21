@@ -20,8 +20,8 @@ export const BUSINESS_INFO = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 11.9416,
-    longitude: 79.8083,
+    latitude: 12.3083674,
+    longitude: 80.0370708,
   },
   priceRange: '₹3,500 - ₹7,500',
   currenciesAccepted: 'INR',
@@ -30,7 +30,7 @@ export const BUSINESS_INFO = {
   checkoutTime: '11:00',
   image: `${SITE_URL}/img/hero-sunset-1280.webp`,
   logo: `${SITE_URL}/favicon.svg`,
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sai+Ranga+Shores+Beach+Home+Pondicherry',
+  mapsUrl: 'https://maps.google.com/maps?q=12.3083674%2C80.0370708&z=17&hl=en',
 };
 
 export const SEO_PAGES = {
