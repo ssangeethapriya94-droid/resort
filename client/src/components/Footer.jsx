@@ -75,9 +75,22 @@ export default function Footer() {
                 ))}
               </ul>
               <div className="footer-timings-compact">
-                <span>Check-in: <strong>12:00 PM</strong></span>
+                <span>Check-in: <strong>11:00 AM</strong></span>
                 <span className="footer-timings-dot">•</span>
-                <span>Check-out: <strong>11:00 AM</strong></span>
+                <span>Check-out: <strong>10:00 AM</strong></span>
+              </div>
+              <div className="footer-rules-compact">
+                <span className="footer-no-pets-tag">
+                  <Icon name="nopets" size={13} /> No Pets Allowed
+                </span>
+              </div>
+              <div className="footer-tariff-compact">
+                <div className="footer-tariff-row">
+                  <span>Mon–Fri: <strong>₹10,000</strong></span>
+                  <span className="footer-timings-dot">•</span>
+                  <span>Sat–Sun: <strong>₹12,000</strong></span>
+                </div>
+                <small className="footer-tariff-sub">Max 6 Guests • Free Breakfast</small>
               </div>
             </div>
 
@@ -85,19 +98,44 @@ export default function Footer() {
             <div className="footer-col footer-col--contact">
               <h4 className="footer-col-title">Get In Touch</h4>
               <div className="footer-contact-items">
+                {/* 1. Ramesh Cell & WhatsApp */}
                 <div className="footer-contact-item">
                   <Icon name="phone" size={15} className="footer-contact-ico" />
                   <div>
-                    <a href="tel:+919940038363" className="footer-contact-val">
-                      +91 99400 38363
+                    <a href={`tel:${SITE.phones[0].tel}`} className="footer-contact-val">
+                      {SITE.phones[0].display}
+                    </a>
+                    <small className="footer-contact-note">Ramesh (Cell &amp; WhatsApp)</small>
+                  </div>
+                </div>
+
+                {/* 2. GPay / UPI */}
+                <div className="footer-contact-item">
+                  <Icon name="gpay" size={15} className="footer-contact-ico" />
+                  <div>
+                    <span className="footer-contact-val">{SITE.gpay}</span>
+                    <small className="footer-contact-note">Google Pay / UPI</small>
+                  </div>
+                </div>
+
+                {/* 3. Email */}
+                <div className="footer-contact-item">
+                  <Icon name="mail" size={15} className="footer-contact-ico" />
+                  <div>
+                    <a href={`mailto:${SITE.email}`} className="footer-contact-val">
+                      {SITE.email}
                     </a>
                   </div>
                 </div>
 
+                {/* 4. Address */}
                 <div className="footer-contact-item">
                   <Icon name="pin" size={15} className="footer-contact-ico" />
                   <div>
                     <span className="footer-contact-val">{SITE.addressLine}</span>
+                    <small className="footer-contact-note" style={{ display: 'block', color: 'rgba(254,254,255,0.85)', marginTop: '2px' }}>
+                      40 kms before Pondicherry (45m – 1h drive)
+                    </small>
                     <a
                       href={SITE.mapsUrl}
                       target="_blank"
@@ -143,7 +181,7 @@ export default function Footer() {
                   <Icon name="youtube" size={16} />
                 </a>
                 <a
-                  href={waLink('Hello Sai Ranga Shores! I would like to enquire about room booking.')}
+                  href={waLink('Hello Ramesh! I would like to enquire about booking a stay at Sai Ranga Shores.')}
                   target="_blank"
                   rel="noreferrer"
                   className="footer-social-btn footer-social-btn--wa"

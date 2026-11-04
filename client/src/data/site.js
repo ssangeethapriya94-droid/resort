@@ -9,20 +9,80 @@ export const SITE = {
   place: 'Pondicherry',
   tagline: 'Dancing with waves',
 
+  // Contact Person & Manager
+  contactPerson: 'Ramesh',
+
+  // Ramesh Cell: 9940038374 (also used for WhatsApp)
   // WhatsApp number in international format, digits only (91 + 10 digits).
-  whatsapp: '919940038363',
+  whatsapp: '919940038374',
   phones: [
-    { label: '', display: '+91 99400 38363', tel: '+919940038363' },
+    { label: 'Ramesh (Cell & WhatsApp)', display: '+91 99400 38374', tel: '+919940038374' },
   ],
-  // TODO: add the client's real email; the contact card hides it while empty.
-  email: '',
-  // TODO: replace with the exact address once the client confirms it.
+
+  // Google Pay / UPI Number
+  gpay: '99400 38363',
+  gpayRaw: '9940038363',
+
+  // Client Email ID (from profile)
+  email: 'rameshadiant@gmail.com',
+
+  // Property address & location
   addressLine: 'Beachfront, near Pondicherry on ECR',
+  locationTitle: 'Near Pondicherry on ECR',
+  distanceKm: '40 kms before Pondicherry',
+  driveTime: '45 minutes to 1 hour depending on traffic and speed',
+  fullLocationNote: 'Near Pondicherry on ECR — 40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed.',
+
+  // Timings & House Rules
+  checkIn: '11:00 AM',
+  checkOut: '10:00 AM',
+  petPolicy: 'No pets allowed',
+  maxGuests: 6,
+
   // Verified Google Maps Business Profile location
   mapsUrl: 'https://www.google.com/maps/place/SaiRanga+Shores+Beach+Home/@12.3084739,80.0358302,19z/data=!3m1!4b1!4m6!3m5!1s0x3a530b0012a376a7:0x15dd3efa0c3c1974!8m2!3d12.3084739!4d80.0370479!16s%2Fg%2F11ywb53c54?hl=en',
   instagram: '',
   facebook: '',
 };
+
+// Tariffs & Accommodation Rates
+export const TARIFFS = {
+  maxGuests: 6,
+  checkIn: '11:00 AM',
+  checkOut: '10:00 AM',
+  petPolicy: 'No pets allowed',
+  location: 'Near Pondicherry on ECR (40 kms before Pondicherry, 45 min – 1 hr drive)',
+  weekday: {
+    title: 'Working Days (Mon – Fri)',
+    rate: 10000,
+    formatted: '₹ 10,000',
+    short: '₹10k',
+    unit: '/ night',
+    breakfast: 'Free Breakfast Included',
+    capacity: '1 to 6 People',
+    badge: 'Working Days Tariff',
+  },
+  weekend: {
+    title: 'Saturday & Sunday',
+    rate: 12000,
+    formatted: '₹ 12,000',
+    short: '₹12k',
+    unit: '/ night',
+    breakfast: 'Breakfast Included',
+    capacity: '1 to 6 People',
+    badge: 'Weekend Tariff',
+  },
+  summary: 'Accommodation for up to a max of 6 people. Both ₹10,000 (working days) and ₹12,000 (weekends) tariffs are applicable from 1 to 6 people with free breakfast.',
+};
+
+export const HOUSE_RULES = [
+  { icon: 'clock', label: 'Check-in', value: '11:00 AM' },
+  { icon: 'clock', label: 'Check-out', value: '10:00 AM' },
+  { icon: 'nopets', label: 'Pet Policy', value: 'No pets allowed' },
+  { icon: 'guests', label: 'Guest Limit', value: 'Max 6 People' },
+  { icon: 'coffee', label: 'Breakfast', value: 'Complimentary Included' },
+  { icon: 'road', label: 'Location', value: '40 kms before Pondicherry on ECR' },
+];
 
 export const NAV = [
   { to: '/', label: 'Home' },
@@ -42,20 +102,24 @@ export const AMENITIES = [
   { icon: 'food', title: 'Local Experiences', text: 'Boats, food and heritage' },
 ];
 
-// price: null shows "Rates on request". Use a number (rupees per night) to show "From ₹X / night".
+// Entire Beach Home Stay: Tariffs apply from 1 to 6 people (₹10,000 on working days, ₹12,000 on Sat & Sun with breakfast).
 export const ROOMS = [
   {
     id: 'deluxe-room',
-    title: 'Deluxe Room',
-    guests: 'Up to 2 Guests',
+    title: 'Deluxe Sea View Room',
+    guests: 'Up to 6 Guests (Total Stay)',
     bed: '1 King Bed',
     view: 'Sea View',
     ac: 'AC',
     wifi: 'Wi-Fi',
-    price: 3500,
+    breakfast: 'Free Breakfast Included',
+    price: 10000,
+    priceWeekend: 12000,
+    priceDisplay: 'From ₹10,000 / night',
+    priceNote: '₹10,000 Mon–Fri · ₹12,000 Sat & Sun (1 to 6 Guests)',
     image: 'img-4941',
-    blurb: 'A cozy and comfortable deluxe sea view room in Pondicherry with wraparound windows and coastal breezes, perfect for couples or small families.',
-    features: ['Wraparound sea-view windows', 'Ceiling fans and AC', 'Marble floors', 'Rooftop pavilion access'],
+    blurb: 'A cozy and comfortable deluxe sea view room in Pondicherry with wraparound windows and coastal breezes, part of our private beach home for up to 6 guests.',
+    features: ['Wraparound sea-view windows', 'Free breakfast included', 'Marble floors & AC', 'Rooftop pavilion access'],
     images: [
       { name: 'img-4941', alt: 'Deluxe sea view room panoramic bedroom with ocean windows' },
       { name: 'img-4872', alt: 'Deluxe sea view room seating and coastal windows' },
@@ -65,16 +129,20 @@ export const ROOMS = [
   },
   {
     id: 'family-room',
-    title: 'Family Room',
-    guests: 'Up to 4 Guests',
+    title: 'Family Sea View Room',
+    guests: 'Up to 6 Guests (Total Stay)',
     bed: '1 King + 1 Twin Bed',
     view: 'Sea View',
     ac: 'AC',
     wifi: 'Wi-Fi',
-    price: 5500,
+    breakfast: 'Free Breakfast Included',
+    price: 10000,
+    priceWeekend: 12000,
+    priceDisplay: 'From ₹10,000 / night',
+    priceNote: '₹10,000 Mon–Fri · ₹12,000 Sat & Sun (1 to 6 Guests)',
     image: 'img-4872',
-    blurb: 'A spacious family room at our Pondicherry beach resort, offering an ideal beach house for family vacations with ocean vistas and generous space.',
-    features: ['Direct ocean vista', 'Dual king beds', 'Private sit-out', 'High-speed Wi-Fi'],
+    blurb: 'A spacious family room at our Pondicherry beach home, offering an ideal coastal getaway for family vacations with ocean vistas and generous space.',
+    features: ['Direct ocean vista', 'Dual king & twin bedding', 'Complimentary breakfast', 'High-speed Wi-Fi & AC'],
     images: [
       { name: 'img-4872', alt: 'Spacious family room at Pondicherry beach resort' },
       { name: 'img-4942', alt: 'Ocean window vista from family room' },
@@ -84,16 +152,20 @@ export const ROOMS = [
   },
   {
     id: 'suite-room',
-    title: 'Suite Room',
-    guests: 'Up to 4 Guests',
+    title: 'Suite Sea View Room',
+    guests: 'Up to 6 Guests (Total Stay)',
     bed: '1 King Bed + Living Area',
     view: 'Sea View',
     ac: 'AC',
     wifi: 'Wi-Fi',
-    price: 7500,
+    breakfast: 'Free Breakfast Included',
+    price: 10000,
+    priceWeekend: 12000,
+    priceDisplay: 'From ₹10,000 / night',
+    priceNote: '₹10,000 Mon–Fri · ₹12,000 Sat & Sun (1 to 6 Guests)',
     image: 'img-9382-effects',
-    blurb: 'An expansive suite room in Pondicherry with a separate living area, panoramic sea views, and direct rooftop observation tower access.',
-    features: ['Panoramic rooftop ocean view', 'Luxury king bedding', 'Breezy pavilion access', 'Dedicated work desk'],
+    blurb: 'An expansive suite room in Pondicherry with a separate living area, panoramic sea views, and direct rooftop observation tower access for up to 6 guests.',
+    features: ['Panoramic rooftop ocean view', 'Complimentary breakfast', 'Breezy pavilion access', 'Dedicated work desk & AC'],
     images: [
       { name: 'img-9382-effects', alt: 'Panoramic rooftop ocean view from suite room pavilion' },
       { name: 'img-9141', alt: 'Rooftop observation tower pavilion sit-out' },
@@ -104,13 +176,14 @@ export const ROOMS = [
 ];
 
 export const FACILITIES = [
-  { icon: 'beach', title: 'Beach Access', text: 'Sand a short walk away' },
-  { icon: 'roof', title: 'Rooftop Pavilion', text: 'Sunrise coffee and ocean views' },
+  { icon: 'beach', title: 'Beach Access', text: 'Sand just steps away near Pondicherry on ECR' },
+  { icon: 'roof', title: 'Rooftop Pavilion', text: 'Sunrise coffee and panoramic 360° ocean views' },
+  { icon: 'clock', title: 'Check-in & Check-out', text: 'Check-in: 11:00 AM • Check-out: 10:00 AM' },
+  { icon: 'nopets', title: 'Pet Policy', text: 'No pets allowed on the property' },
+  { icon: 'road', title: 'Location on ECR', text: '40 kms before Pondicherry (45m–1h drive)' },
   { icon: 'wifi', title: 'Free Wi-Fi', text: 'Stay connected throughout the property' },
-  { icon: 'parking', title: 'Parking Space', text: 'Secure on-site parking for vehicles' },
-  { icon: 'guests', title: 'Family Friendly Rooms', text: 'Comfortable suites for family stays' },
-  { icon: 'spark', title: 'Housekeeping Services', text: 'Daily fresh linens and tidying' },
-  { icon: 'chair', title: 'Seating Areas', text: 'Relaxing outdoor verandas and sit-outs' },
+  { icon: 'parking', title: 'Secure Parking', text: 'Private on-site parking for vehicles' },
+  { icon: 'coffee', title: 'Complimentary Breakfast', text: 'Fresh morning breakfast included with all stays' },
 ];
 
 export const EXPERIENCES = [

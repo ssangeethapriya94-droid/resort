@@ -98,6 +98,60 @@ async function handleApi(req, res, url) {
   }
   if (url.pathname === '/api/health' && req.method === 'GET') return send(res, 200, { ok: true }, cors);
 
+  if (url.pathname === '/api/availability' && req.method === 'GET') {
+    const checkin = url.searchParams.get('checkin') || '';
+    const checkout = url.searchParams.get('checkout') || '';
+    const guests = Math.min(Math.max(Number(url.searchParams.get('guests')) || 2, 1), 6);
+
+    let nights = 0;
+    let weekdayNights = 0;
+    let weekendNights = 0;
+    let total = 0;
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(checkin) && /^\d{4}-\d{2}-\d{2}$/.test(checkout) && checkout > checkin) {
+      const cur = new Date(checkin + 'T00:00:00');
+      const end = new Date(checkout + 'T00:00:00');
+      while (cur < end) {
+        nights++;
+        const day = cur.getDay(); // 0 is Sun, 6 is Sat
+        if (day === 0 || day === 6) {
+          weekendNights++;
+          total += 12000;
+        } else {
+          weekdayNights++;
+          total += 10000;
+        }
+        cur.setDate(cur.getDate() + 1);
+      }
+    }
+
+    return send(res, 200, {
+      available: true,
+      checkin,
+      checkout,
+      nights,
+      weekdayNights,
+      weekendNights,
+      weekdayRate: 10000,
+      weekendRate: 12000,
+      total,
+      breakfast: 'Complimentary included for all guests',
+      maxGuests: 6,
+      selectedGuests: guests,
+      checkInTime: '11:00 AM',
+      checkOutTime: '10:00 AM',
+      petPolicy: 'No pets allowed',
+      location: 'near Pondicherry on ECR (40 kms before Pondicherry, 45m-1h drive)',
+      host: {
+        name: 'Ramesh',
+        phone: '+91 99400 38374',
+        whatsapp: '+91 99400 38374',
+        gpay: '99400 38363',
+        email: 'rameshadiant@gmail.com',
+      },
+    }, cors);
+  }
+
   if (url.pathname === '/api/contact' && req.method === 'POST') {
     const ip = req.socket.remoteAddress || 'unknown';
     if (limited(ip)) return send(res, 429, { error: 'Too many messages. Please try again in a few minutes.' }, cors);

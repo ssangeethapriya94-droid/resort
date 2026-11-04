@@ -2,7 +2,7 @@ import Img from '../components/Img.jsx';
 import Icon from '../components/Icons.jsx';
 import ContactForm from '../components/ContactForm.jsx';
 import { WaveRipple, CurvedArrow, Frond } from '../components/Decor.jsx';
-import { SITE } from '../data/site.js';
+import { SITE, TARIFFS } from '../data/site.js';
 import { waLink } from '../lib/whatsapp.js';
 
 export default function Contact() {
@@ -67,40 +67,92 @@ export default function Contact() {
 
               {/* Contact Direct Items */}
               <div className="contact-info-body">
-                {/* Phone */}
-                <a href="tel:+919940038363" className="contact-info-item">
+                {/* 1. Ramesh Cell & WhatsApp */}
+                <a href={`tel:${SITE.phones[0].tel}`} className="contact-info-item">
                   <div className="contact-icon-badge">
                     <Icon name="phone" size={18} />
                   </div>
                   <div className="contact-item-details">
-                    <span className="contact-item-val">+91 99400 38363</span>
+                    <span className="contact-item-label">Ramesh (Cell &amp; WhatsApp)</span>
+                    <span className="contact-item-val">{SITE.phones[0].display}</span>
                   </div>
                   <div className="contact-item-flourish" aria-hidden="true">
                     <WaveRipple color="#7DC3E2" />
                   </div>
                 </a>
 
-                {/* Address Item */}
+                {/* 2. GPay / UPI */}
+                <div className="contact-info-item contact-info-item--gpay">
+                  <div className="contact-icon-badge contact-icon-badge--gpay">
+                    <Icon name="gpay" size={19} />
+                  </div>
+                  <div className="contact-item-details">
+                    <span className="contact-item-label">Google Pay / UPI</span>
+                    <span className="contact-item-val">{SITE.gpay}</span>
+                    <span className="contact-item-sub">GPay payment for bookings &amp; advances</span>
+                  </div>
+                </div>
+
+                {/* 3. Email ID */}
+                <a href={`mailto:${SITE.email}`} className="contact-info-item">
+                  <div className="contact-icon-badge">
+                    <Icon name="mail" size={18} />
+                  </div>
+                  <div className="contact-item-details">
+                    <span className="contact-item-label">Email ID</span>
+                    <span className="contact-item-val">{SITE.email}</span>
+                  </div>
+                </a>
+
+                {/* 4. Address Item */}
                 <div className="contact-info-item contact-info-item--address">
                   <div className="contact-icon-badge">
                     <Icon name="pin" size={18} />
                   </div>
                   <div className="contact-item-details">
-                    <span className="contact-item-val">Beachfront, near Pondicherry on ECR</span>
-                    <span className="contact-item-sub">ECR, Tamil Nadu / Pondicherry Coast, India</span>
+                    <span className="contact-item-label">Location</span>
+                    <span className="contact-item-val">{SITE.addressLine}</span>
+                    <span className="contact-item-sub">40 kms before Pondicherry • Drive of 45 min to 1 hr depending on traffic &amp; speed</span>
+                  </div>
+                </div>
+
+                {/* 5. Tariff & House Rules Snapshot Card */}
+                <div className="contact-tariff-box">
+                  <div className="contact-tariff-head">
+                    <Icon name="coffee" size={16} />
+                    <strong>Tariff, Timings &amp; House Rules</strong>
+                  </div>
+                  <div className="contact-tariff-lines">
+                    <div className="contact-tariff-line">
+                      <span>Working Days (Mon–Fri):</span>
+                      <strong>₹10,000 / night</strong>
+                    </div>
+                    <div className="contact-tariff-line">
+                      <span>Saturday &amp; Sunday:</span>
+                      <strong>₹12,000 / night</strong>
+                    </div>
+                    <div className="contact-tariff-line">
+                      <span>Check-in / Check-out:</span>
+                      <strong>11:00 AM / 10:00 AM</strong>
+                    </div>
+                    <div className="contact-tariff-foot">
+                      <span>✓ Up to 6 People (1 to 6 Guests covered with Free Breakfast)</span>
+                      <span>✓ 40 kms before Pondicherry on ECR (45m – 1h drive)</span>
+                      <span className="contact-foot-nopets">🚫 Strictly No Pets Allowed</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Bottom Action Buttons */}
                 <div className="contact-action-btns">
                   <a
-                    href={waLink('Hello Sai Ranga Shores! I would like to inquire about booking a stay.')}
+                    href={waLink('Hello Ramesh! I would like to inquire about booking a stay at Sai Ranga Shores.')}
                     target="_blank"
                     rel="noreferrer"
                     className="contact-btn contact-btn--wa"
                   >
                     <Icon name="whatsapp" size={18} />
-                    <span>WhatsApp Enquiry</span>
+                    <span>WhatsApp Ramesh</span>
                     <Icon name="arrow" size={14} />
                   </a>
 
@@ -207,9 +259,19 @@ export default function Contact() {
               <span className="contact-loc-eyebrow">OUR LOCATION</span>
               <h2 className="contact-loc-title">Find Us Near Pondicherry on ECR</h2>
               <p className="contact-loc-desc">
-                Sai Ranga Shores is perfectly located near Pondicherry on ECR, offering easy access to
-                beaches, local attractions and a peaceful coastal retreat.
+                Sai Ranga Shores is situated beachfront <strong>near Pondicherry on ECR</strong>. In fact, our exact location is <strong>40 kms before Pondicherry</strong>, a scenic coastal drive of <strong>45 minutes to 1 hour</strong> depending on traffic and speed. Enjoy peaceful uncrowded shores while keeping Pondicherry easily accessible.
               </p>
+              <div className="contact-loc-rule-badges">
+                <span className="contact-rule-chip">
+                  <Icon name="clock" size={14} /> Check-in: <strong>11:00 AM</strong>
+                </span>
+                <span className="contact-rule-chip">
+                  <Icon name="clock" size={14} /> Check-out: <strong>10:00 AM</strong>
+                </span>
+                <span className="contact-rule-chip contact-rule-chip--nopets">
+                  <Icon name="nopets" size={14} /> <strong>No Pets Allowed</strong>
+                </span>
+              </div>
               <a
                 href={SITE.mapsUrl}
                 target="_blank"
@@ -217,7 +279,7 @@ export default function Contact() {
                 className="btn btn--ghost contact-loc-btn"
               >
                 <Icon name="pin" size={17} />
-                <span>Get Directions</span>
+                <span>Get Directions on Google Maps</span>
                 <Icon name="arrow" size={14} />
               </a>
             </div>
@@ -317,27 +379,27 @@ export default function Contact() {
               <ul className="contact-loc-perks">
                 <li>
                   <span className="contact-perk-ico">
-                    <Icon name="car" size={17} />
+                    <Icon name="pin" size={17} />
                   </span>
                   <span>Near Pondicherry on ECR</span>
                 </li>
                 <li>
                   <span className="contact-perk-ico">
-                    <Icon name="sea" size={17} />
+                    <Icon name="road" size={17} />
                   </span>
-                  <span>Beachfront Location</span>
+                  <span>40 kms Before Pondicherry (45m–1h)</span>
                 </li>
                 <li>
                   <span className="contact-perk-ico">
-                    <Icon name="pin" size={17} />
+                    <Icon name="clock" size={17} />
                   </span>
-                  <span>Easy Access</span>
+                  <span>In: 11:00 AM | Out: 10:00 AM</span>
                 </li>
                 <li>
                   <span className="contact-perk-ico">
-                    <Icon name="bell" size={17} />
+                    <Icon name="nopets" size={17} />
                   </span>
-                  <span>Peaceful Surroundings</span>
+                  <span>Strictly No Pets Allowed</span>
                 </li>
               </ul>
 
@@ -395,7 +457,7 @@ export default function Contact() {
 
               <div className="contact-cta-action">
                 <a
-                  href={waLink('Hello Sai Ranga Shores! I want to plan my stay and check room availability.')}
+                  href={waLink('Hello Ramesh! I want to plan my stay at Sai Ranga Shores and check availability for up to 6 guests.')}
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn--primary contact-cta-wa-btn"

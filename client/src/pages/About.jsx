@@ -24,7 +24,7 @@ export default function About() {
           </div>
         }
       >
-        A peaceful beach retreat and coastal escape near Pondicherry on ECR, created for travelers seeking comfort, privacy and the soothing rhythm of the waves.
+        A peaceful beach retreat and coastal escape near Pondicherry on ECR (situated 40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed), created for travelers seeking comfort, privacy and the soothing rhythm of waves.
       </PageHeader>
 
       {/* Story Section */}
@@ -36,18 +36,18 @@ export default function About() {
               Where Hospitality Meets <span className="home-script-title">the Ocean<ScribbleUnderline /></span>
             </h2>
             <p className="home-about-desc">
-              Nestled along the quiet coastline near Pondicherry on ECR, Sai Ranga Shores Beach Home is a relaxing beach home created for those who cherish ocean serenity. Designed as a peaceful beach retreat near Pondicherry on ECR, our property gives guests an authentic beachfront homestay experience where you can unplug from city rush and reconnect with nature.
+              Nestled along the quiet coastline near Pondicherry on ECR, Sai Ranga Shores Beach Home is a relaxing sanctuary created for those who cherish ocean serenity. Located 40 kms before Pondicherry (a drive of 45 minutes to 1 hour depending on traffic and speed), our property gives guests an authentic beachfront homestay experience away from urban clamor.
             </p>
             <p className="home-about-desc">
-              Whether you are watching the golden sunrise over the Bay of Bengal from our rooftop observation pavilion, enjoying tranquil barefoot beach walks just steps from your room, or relaxing in our comfortable sea-view suites, Sai Ranga Shores offers a warm coastal escape near Pondicherry on ECR that feels just like home.
+              Whether you are watching the golden sunrise over the Bay of Bengal from our rooftop observation pavilion, enjoying tranquil barefoot beach walks just steps from your room, or relaxing in our comfortable sea-view suites, Sai Ranga Shores offers a warm coastal escape near Pondicherry on ECR that feels just like home. Accommodation is available for up to a maximum of 6 people with complimentary breakfast.
             </p>
             <div className="about-hosts-card">
               <div className="about-hosts-avatar">
                 <Icon name="guests" size={24} />
               </div>
               <div className="about-hosts-info">
-                <h4>Hosted with Care</h4>
-                <p>Personal hospitality and local guidance by Sankar & Divya to ensure your stay is comfortable and memorable.</p>
+                <h4>Hosted with Care by Ramesh</h4>
+                <p>Personal hospitality, local guidance, and attentive care by Ramesh to ensure your beachfront stay is memorable.</p>
               </div>
             </div>
           </Reveal>
@@ -90,7 +90,7 @@ export default function About() {
             <Reveal className="about-pillar-card" delay={50}>
               <div className="about-pillar-icon"><Icon name="sea" size={30} /></div>
               <h3>Direct Beach Access</h3>
-              <p>Step directly from the property onto the soft shoreline. No long walks or busy roads—just the open sea.</p>
+              <p>Step directly from the property onto soft sands. Situated near Pondicherry on ECR, 40 kms before Pondicherry.</p>
             </Reveal>
 
             <Reveal className="about-pillar-card" delay={100}>
@@ -100,15 +100,27 @@ export default function About() {
             </Reveal>
 
             <Reveal className="about-pillar-card" delay={150}>
-              <div className="about-pillar-icon"><Icon name="wind" size={30} /></div>
-              <h3>Spacious Sea-View Rooms</h3>
-              <p>Thoughtfully designed rooms wrapped with large windows, modern AC, plush beds and sparkling sea vistas.</p>
+              <div className="about-pillar-icon"><Icon name="clock" size={30} /></div>
+              <h3>Timings: 11 AM to 10 AM</h3>
+              <p>Convenient check-in at 11:00 AM and check-out at 10:00 AM for a seamless, well-rested stay experience.</p>
             </Reveal>
 
             <Reveal className="about-pillar-card" delay={200}>
+              <div className="about-pillar-icon"><Icon name="nopets" size={30} /></div>
+              <h3>No Pets Policy</h3>
+              <p>To ensure allergen-free comfort and utmost hygiene for all guests, strictly no pets are allowed on property.</p>
+            </Reveal>
+
+            <Reveal className="about-pillar-card" delay={250}>
+              <div className="about-pillar-icon"><Icon name="road" size={30} /></div>
+              <h3>40 kms Before Pondicherry</h3>
+              <p>A tranquil scenic drive of 45 minutes to 1 hour depending on traffic and speed, just off the East Coast Road.</p>
+            </Reveal>
+
+            <Reveal className="about-pillar-card" delay={300}>
               <div className="about-pillar-icon"><Icon name="food" size={30} /></div>
-              <h3>Warm Homestyle Hospitality</h3>
-              <p>Attentive, friendly service with authentic local coastal cuisine recommendations and Pondicherry travel tips.</p>
+              <h3>Free Homestyle Breakfast</h3>
+              <p>Complimentary freshly prepared morning breakfast included with all stays covering up to 6 people.</p>
             </Reveal>
           </div>
         </div>
@@ -122,15 +134,17 @@ export default function About() {
           <div className="container cta-ocean-inner">
             <p className="home-eyebrow eyebrow--light">— VISIT US NEAR PONDICHERRY ON ECR —</p>
             <h2 className="cta-ocean-title">Experience the Ocean Calm</h2>
-            <p className="cta-ocean-desc">Book direct with us on WhatsApp for the best seasonal rates and room selection.</p>
+            <p className="cta-ocean-desc">
+              Situated near Pondicherry on ECR (40 kms before Pondicherry). Book direct with Ramesh on WhatsApp for best rates.
+            </p>
             <div className="cta-ocean-btns">
               <a
                 className="btn btn--whatsapp"
-                href={waLink('Hello Sai Ranga Shores! I would like to plan a stay.')}
+                href={waLink('Hello Ramesh! I would like to plan a stay at Sai Ranga Shores.')}
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icon name="whatsapp" size={19} /> WhatsApp Us
+                <Icon name="whatsapp" size={19} /> WhatsApp Ramesh
               </a>
               <Link className="btn btn--ghost-light" to="/contact">
                 Contact & Booking <Icon name="arrow" size={15} />

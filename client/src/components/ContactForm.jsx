@@ -135,7 +135,7 @@ export default function ContactForm() {
 
         {/* Check-in Date Input */}
         <div className={`cform-field ${errors.checkin ? 'has-error' : ''}`}>
-          <label htmlFor="cform-checkin">Check-in Date *</label>
+          <label htmlFor="cform-checkin">Check-in Date * <small style={{ fontWeight: 400, opacity: 0.85 }}>(Check-in 11:00 AM)</small></label>
           <div className="cform-input-wrap">
             <span className="cform-icon">
               <Icon name="calendar" size={17} />
@@ -154,7 +154,7 @@ export default function ContactForm() {
 
         {/* Guests Dropdown (Full Width) */}
         <div className="cform-field cform-field--full">
-          <label htmlFor="cform-guests">Guests *</label>
+          <label htmlFor="cform-guests">Guests * <small style={{ fontWeight: 400, opacity: 0.85 }}>(Max 6 People)</small></label>
           <div className="cform-input-wrap">
             <span className="cform-icon">
               <Icon name="guests" size={17} />
@@ -165,14 +165,18 @@ export default function ContactForm() {
               onChange={set('guests')}
               className="cform-select"
             >
-              <option value="">Select number of guests</option>
+              <option value="">Select number of guests (Up to 6)</option>
               <option value="1 Guest">1 Guest</option>
-              <option value="2 Guests">2 Guests (Couple)</option>
+              <option value="2 Guests">2 Guests</option>
               <option value="3 Guests">3 Guests</option>
-              <option value="4 Guests">4 Guests (Family)</option>
-              <option value="5+ Guests">5+ Guests / Large Group</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="5 Guests">5 Guests</option>
+              <option value="6 Guests">6 Guests (Max Capacity)</option>
             </select>
           </div>
+          <span className="cform-tariff-note">
+            Tariffs: ₹10k (Mon–Fri) / ₹12k (Sat–Sun) for 1 to 6 guests • Free Breakfast • Check-in: 11 AM | Check-out: 10 AM • No Pets • Near Pondicherry on ECR (40 kms before)
+          </span>
         </div>
 
         {/* Message Input (Full Width) */}

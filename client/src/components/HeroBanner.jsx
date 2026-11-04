@@ -50,6 +50,88 @@ const CYLINDER_PHOTOS = [
   },
 ];
 
+// 4 Highlights Cards for the smooth moving horizontal scroll showcase
+const HIGHLIGHT_CARDS = [
+  {
+    id: 'tariff',
+    theme: 'tariff',
+    icon: 'coffee',
+    iconWrapClass: 'hero-feat-icon-wrap--coffee',
+    badgeText: 'Breakfast Included',
+    badgeClass: 'hero-feat-badge--green',
+    kicker: 'TRANSPARENT TARIFFS',
+    hasRateLine: true,
+    heading: '',
+    desc: 'Mon–Fri ₹10k & Sat–Sun ₹12k with complimentary morning breakfast.',
+  },
+  {
+    id: 'villa',
+    theme: 'villa',
+    icon: 'home',
+    iconWrapClass: 'hero-feat-icon-wrap--home',
+    badgeText: 'Entire Beach House',
+    badgeClass: 'hero-feat-badge--teal',
+    kicker: 'PRIVATE RETREAT',
+    hasRateLine: false,
+    heading: 'Up to 6 Guests Max',
+    desc: 'Flat tariff covers 1 to 6 people. Complete private seaside villa stay.',
+  },
+  {
+    id: 'rules',
+    theme: 'rules',
+    icon: 'clock',
+    iconWrapClass: 'hero-feat-icon-wrap--clock',
+    badgeText: 'No Pets',
+    hasNoPetsIcon: true,
+    badgeClass: 'hero-feat-badge--nopets',
+    kicker: 'STAY TIMINGS & RULES',
+    hasRateLine: false,
+    heading: 'In: 11:00 AM · Out: 10:00 AM',
+    desc: 'Relaxed 11 AM check-in, 10 AM check-out. Strictly no pets on property.',
+  },
+  {
+    id: 'location',
+    theme: 'loc',
+    icon: 'pin',
+    iconWrapClass: 'hero-feat-icon-wrap--pin',
+    badgeText: 'East Coast Road',
+    badgeClass: 'hero-feat-badge--blue',
+    kicker: 'COASTAL LOCATION',
+    hasRateLine: false,
+    heading: 'Near Pondicherry on ECR',
+    desc: '40 kms before Pondicherry — a scenic 45m to 1 hour coastal drive.',
+  },
+];
+
+function HighlightCardItem({ card }) {
+  return (
+    <div className={`hero-feat-card hero-feat-card--${card.theme}`}>
+      <div className="hero-feat-top">
+        <div className={`hero-feat-icon-wrap ${card.iconWrapClass}`}>
+          <Icon name={card.icon} size={18} />
+        </div>
+        <span className={`hero-feat-badge ${card.badgeClass}`}>
+          {card.hasNoPetsIcon && <Icon name="nopets" size={12} />}
+          <span>{card.badgeText}</span>
+        </span>
+      </div>
+      <div className="hero-feat-body">
+        <span className="hero-feat-kicker">{card.kicker}</span>
+        {card.hasRateLine ? (
+          <div className="hero-feat-rate-line">
+            <strong>₹10,000</strong> <span className="hero-feat-rate-sub">/ weekday</span>
+            <span className="hero-feat-slash">·</span>
+            <strong className="hero-feat-weekend-price">₹12,000</strong> <span className="hero-feat-rate-sub">/ weekend</span>
+          </div>
+        ) : (
+          <h3 className="hero-feat-heading">{card.heading}</h3>
+        )}
+        <p className="hero-feat-desc">{card.desc}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function HeroBanner() {
   const [activeIndex, setActiveIndex] = useState(0);
   const total = CYLINDER_PHOTOS.length;
@@ -223,6 +305,30 @@ export default function HeroBanner() {
         {/* Floating Booking Bar directly below the hero grid */}
         <div className="hero-modern-booking-wrap">
           <BookingBar />
+
+          {/* Moving Luxury Highlights Cards (Infinite Horizontal Auto-Scroll Showcase) */}
+          <div className="hero-scroll-container" aria-label="Resort Highlights and Policies">
+            <div className="hero-scroll-viewport">
+              <div className="hero-scroll-track">
+                {/* 3 identical sets of cards for seamless, continuous infinite looping */}
+                {HIGHLIGHT_CARDS.map((card) => (
+                  <HighlightCardItem key={`set1-${card.id}`} card={card} />
+                ))}
+                {HIGHLIGHT_CARDS.map((card) => (
+                  <HighlightCardItem key={`set2-${card.id}`} card={card} />
+                ))}
+                {HIGHLIGHT_CARDS.map((card) => (
+                  <HighlightCardItem key={`set3-${card.id}`} card={card} />
+                ))}
+              </div>
+            </div>
+
+            {/* Subtle animated indicator hint */}
+            <div className="hero-scroll-hint">
+              <span className="hero-scroll-dot" />
+              <span>Hover or touch cards to pause • Real-time Beach Home Highlights</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

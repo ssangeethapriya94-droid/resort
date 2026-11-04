@@ -9,6 +9,7 @@ import { waLink } from '../lib/whatsapp.js';
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
+  const [tariffHighlight, setTariffHighlight] = useState('all'); // 'all' | 'weekday' | 'weekend'
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function Home() {
             </h2>
 
             <p className="home-about-lead">
-              Sai Ranga Shores Beach Home is a peaceful beach resort near Pondicherry on ECR nestled along the quiet coastline. Designed for travelers seeking an authentic beachfront resort near Pondicherry on ECR, a private beach house near Pondicherry on ECR, or a relaxing coastal beach stay, our property offers spacious sea view rooms, warm homestyle hospitality, and direct steps to virgin sands.
+              Sai Ranga Shores Beach Home is a peaceful beach resort near Pondicherry on ECR nestled along the quiet coastline—situated 40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed. Designed for travelers seeking an authentic beachfront resort near Pondicherry on ECR, a private beach house, or a relaxing coastal stay, our property offers spacious sea view rooms, warm homestyle hospitality by Ramesh, and direct steps to virgin sands.
             </p>
 
             {/* 4 Interactive Feature Highlights */}
@@ -230,14 +231,15 @@ export default function Home() {
               <p className="home-eyebrow">— COASTAL BEACH STAY ON ECR —</p>
               <h2 className="home-section-title">Sea View Rooms &amp; Suites</h2>
               <p className="home-section-sub">
-                Thoughtfully designed sea view rooms near Pondicherry on ECR with modern amenities and stunning ocean vistas.
+                Spacious sea view rooms near Pondicherry on ECR — 40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed. Wake up to ocean sunrises and gentle sea breezes.
               </p>
             </div>
             <Link to="/stay" className="home-section-link">
-              View All Rooms <Icon name="arrow" size={15} />
+              View All Details <Icon name="arrow" size={15} />
             </Link>
           </div>
 
+          {/* The 3 Room Cards Appear Immediately Without Any Blocking Box */}
           <div className="home-rooms-grid">
             {ROOMS.map((room) => (
               <div key={room.id} className="home-room-card">
@@ -247,6 +249,7 @@ export default function Home() {
                     alt={room.title}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
+                  <span className="home-room-breakfast-badge">Free Breakfast</span>
                 </div>
 
                 <div className="home-room-content">
@@ -276,13 +279,16 @@ export default function Home() {
 
                   <div className="home-room-bottom">
                     <div className="home-room-price">
-                      <span className="home-price-from">From </span>
-                      <strong className="home-price-amount">₹{room.price.toLocaleString()}</strong>
-                      <span className="home-price-unit"> / night</span>
+                      <div className="home-price-main-line">
+                        <span className="home-price-from">From </span>
+                        <strong className="home-price-amount">₹{room.price.toLocaleString()}</strong>
+                        <span className="home-price-unit"> / nt (Mon–Fri)</span>
+                      </div>
+                      <span className="home-price-weekend-note">₹12,000 / nt (Sat–Sun) • 1 to 6 Guests</span>
                     </div>
 
                     <a
-                      href={waLink(`Hello Sai Ranga Shores! I would like to book the ${room.title}.`)}
+                      href={waLink(`Hello Ramesh! I would like to book a stay at Sai Ranga Shores (${room.title}) for up to 6 guests.`)}
                       target="_blank"
                       rel="noreferrer"
                       className="btn btn--primary home-room-btn"
@@ -293,6 +299,269 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3B. Dedicated Tariffs, Timings & Stay Guidelines Section (New Location & Luxury 2-Column Design) */}
+      <section id="tariffs" className="home-tariffs-section" aria-label="Official Tariffs and Stay Rules">
+        <Frond className="home-tariffs-frond home-tariffs-frond--left" seed={9} color="#1d4d3a" />
+        <Frond className="home-tariffs-frond home-tariffs-frond--right" seed={14} color="#1d4d3a" />
+
+        <div className="container">
+          <div className="home-section-header home-section-header--center">
+            <p className="home-eyebrow">— TRANSPARENT ALL-INCLUSIVE RATES —</p>
+            <h2 className="home-section-title">Beach House Tariffs &amp; Stay Rules</h2>
+            <p className="home-section-sub home-section-sub--center">
+              Clear, honest pricing with zero hidden fees. Flat tariff covers your stay for 1 to 6 people with complimentary breakfast. Situated near Pondicherry on ECR (40 kms before Pondicherry, 45m–1h scenic coastal drive).
+            </p>
+          </div>
+
+          {/* Interactive Day Filter Tabs */}
+          <div className="home-tariffs-toggle-bar" role="tablist" aria-label="Tariff day filter">
+            <button
+              type="button"
+              role="tab"
+              aria-selected={tariffHighlight === 'all'}
+              className={`home-tariffs-toggle-btn ${tariffHighlight === 'all' ? 'is-active' : ''}`}
+              onClick={() => setTariffHighlight('all')}
+            >
+              <span>All Rates &amp; Guidelines</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={tariffHighlight === 'weekday'}
+              className={`home-tariffs-toggle-btn ${tariffHighlight === 'weekday' ? 'is-active' : ''}`}
+              onClick={() => setTariffHighlight('weekday')}
+            >
+              <Icon name="coffee" size={15} />
+              <span>Working Days: ₹10,000 / nt</span>
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={tariffHighlight === 'weekend'}
+              className={`home-tariffs-toggle-btn ${tariffHighlight === 'weekend' ? 'is-active' : ''}`}
+              onClick={() => setTariffHighlight('weekend')}
+            >
+              <Icon name="sun" size={15} />
+              <span>Weekends: ₹12,000 / nt</span>
+            </button>
+          </div>
+
+          {/* 2-Column Luxury Presentation Grid */}
+          <div className="home-tariffs-split-grid">
+            {/* Left Column: Side-by-Side Dual Rate Showcase */}
+            <div className="home-tariffs-rates-col">
+              {/* Card 1: Working Days (Mon–Fri) */}
+              <div
+                className={`home-rate-card home-rate-card--weekday ${
+                  tariffHighlight === 'weekend' ? 'is-dimmed' : ''
+                } ${tariffHighlight === 'weekday' ? 'is-focused' : ''}`}
+              >
+                <div className="home-rate-card-head">
+                  <div className="home-rate-badge home-rate-badge--green">
+                    <span className="home-rate-pulse home-rate-pulse--green" /> Free Breakfast Included
+                  </div>
+                  <span className="home-rate-capacity-pill">1 to 6 Guests</span>
+                </div>
+
+                <div className="home-rate-pricing">
+                  <span className="home-rate-kicker">WORKING DAYS (MON–FRI)</span>
+                  <div className="home-rate-figure">
+                    <span className="home-rate-currency">₹</span>
+                    <strong className="home-rate-num">10,000</strong>
+                    <span className="home-rate-period">/ night</span>
+                  </div>
+                  <p className="home-rate-summary">
+                    Peaceful midweek escape. Flat rate covers entire beach home for 1 to 6 people.
+                  </p>
+                </div>
+
+                <ul className="home-rate-perks">
+                  <li><Icon name="check" size={15} /> Complimentary morning breakfast</li>
+                  <li><Icon name="check" size={15} /> Accommodates up to 6 people maximum</li>
+                  <li><Icon name="check" size={15} /> Direct steps onto uncrowded beach sands</li>
+                  <li><Icon name="check" size={15} /> Private lawn garden &amp; sea view bedrooms</li>
+                </ul>
+
+                <div className="home-rate-card-foot">
+                  <span className="home-rate-foot-tag">Best Midweek Value</span>
+                </div>
+              </div>
+
+              {/* Card 2: Weekends (Sat & Sun) */}
+              <div
+                className={`home-rate-card home-rate-card--weekend ${
+                  tariffHighlight === 'weekday' ? 'is-dimmed' : ''
+                } ${tariffHighlight === 'weekend' ? 'is-focused' : ''}`}
+              >
+                <div className="home-rate-card-head">
+                  <div className="home-rate-badge home-rate-badge--gold">
+                    <span className="home-rate-pulse home-rate-pulse--gold" /> Breakfast Included
+                  </div>
+                  <span className="home-rate-capacity-pill">1 to 6 Guests</span>
+                </div>
+
+                <div className="home-rate-pricing">
+                  <span className="home-rate-kicker">WEEKENDS (SAT &amp; SUN)</span>
+                  <div className="home-rate-figure">
+                    <span className="home-rate-currency">₹</span>
+                    <strong className="home-rate-num home-rate-num--gold">12,000</strong>
+                    <span className="home-rate-period">/ night</span>
+                  </div>
+                  <p className="home-rate-summary">
+                    Rejuvenating weekend escape. Flat rate covers entire beach home for 1 to 6 people.
+                  </p>
+                </div>
+
+                <ul className="home-rate-perks">
+                  <li><Icon name="check" size={15} /> Complimentary weekend breakfast</li>
+                  <li><Icon name="check" size={15} /> Accommodates up to 6 people maximum</li>
+                  <li><Icon name="check" size={15} /> 360° Sunrise observatory viewing tower</li>
+                  <li><Icon name="check" size={15} /> Private coconut palm garden pavilion</li>
+                </ul>
+
+                <div className="home-rate-card-foot">
+                  <span className="home-rate-foot-tag home-rate-foot-tag--gold">Weekend Retreat</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Stay Rules, Timings & Direct Host Ramesh Contact */}
+            <div className="home-tariffs-policy-col">
+              {/* Card A: Stay Timings & Capacity */}
+              <div className="home-policy-card home-policy-card--timing">
+                <div className="home-pcard-icon home-pcard-icon--blue">
+                  <Icon name="clock" size={22} />
+                </div>
+                <div className="home-pcard-content">
+                  <span className="home-pcard-kicker">STAY TIMINGS &amp; CAPACITY</span>
+                  <div className="home-timing-blocks">
+                    <div className="home-timing-block">
+                      <span className="home-timing-lbl">CHECK-IN</span>
+                      <strong className="home-timing-val">11:00 AM</strong>
+                    </div>
+                    <div className="home-timing-divider" />
+                    <div className="home-timing-block">
+                      <span className="home-timing-lbl">CHECK-OUT</span>
+                      <strong className="home-timing-val">10:00 AM</strong>
+                    </div>
+                  </div>
+                  <div className="home-pcard-subnote">
+                    <Icon name="guests" size={14} />
+                    <span><strong>Max 6 people capacity</strong> (1 to 6 guests covered under flat tariff)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card B: House Policy & Location */}
+              <div className="home-policy-card home-policy-card--rules">
+                <div className="home-pcard-icon home-pcard-icon--red">
+                  <Icon name="nopets" size={22} />
+                </div>
+                <div className="home-pcard-content">
+                  <span className="home-pcard-kicker">HOUSE POLICY &amp; LOCATION</span>
+                  <div className="home-policy-status">
+                    <span className="home-policy-pill--nopets">
+                      <Icon name="nopets" size={13} /> Strictly No Pets Allowed
+                    </span>
+                  </div>
+                  <div className="home-loc-note">
+                    <div className="home-loc-pin">
+                      <Icon name="pin" size={14} />
+                      <strong>Near Pondicherry on ECR</strong>
+                    </div>
+                    <p className="home-loc-desc">
+                      Situated 40 kms before Pondicherry — a scenic drive of 45 minutes to 1 hour depending on traffic and speed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card C: Direct Host Booking & GPay Verification */}
+              <div className="home-policy-card home-policy-card--host">
+                <div className="home-host-card-top">
+                  <div className="home-host-avatar">
+                    <span>R</span>
+                  </div>
+                  <div className="home-host-info">
+                    <span className="home-host-name">Direct Booking with Host Ramesh</span>
+                    <span className="home-host-role">Attentive On-Site Caretaker &amp; Host</span>
+                  </div>
+                </div>
+
+                <div className="home-host-details-list">
+                  <div className="home-hdetail-item">
+                    <Icon name="phone" size={14} />
+                    <span>Cell &amp; WhatsApp: <a href="tel:+919940038374"><strong>+91 99400 38374</strong></a></span>
+                  </div>
+                  <div className="home-hdetail-item">
+                    <Icon name="gpay" size={14} />
+                    <span>Google Pay / UPI: <strong>99400 38363</strong></span>
+                  </div>
+                  <div className="home-hdetail-item">
+                    <Icon name="mail" size={14} />
+                    <span>Email: <a href="mailto:rameshadiant@gmail.com"><strong>rameshadiant@gmail.com</strong></a></span>
+                  </div>
+                </div>
+
+                <div className="home-host-btns">
+                  <a
+                    href={waLink('Hello Ramesh! I want to check availability and book a stay at Sai Ranga Shores.')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="home-hbtn home-hbtn--wa"
+                  >
+                    <Icon name="whatsapp" size={17} />
+                    <span>WhatsApp Ramesh</span>
+                  </a>
+                  <a href="tel:+919940038374" className="home-hbtn home-hbtn--call">
+                    <Icon name="phone" size={15} />
+                    <span>Call Host</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Continuous Gliding Wave Ticker Tape at bottom of section */}
+          <div className="home-tariffs-ticker-wrap">
+            <div className="home-tariffs-ticker-track">
+              {[1, 2].map((k) => (
+                <div key={k} className="home-tariffs-ticker-items" aria-hidden={k === 2}>
+                  <span className="htt-item htt-item--green">
+                    <Icon name="coffee" size={14} /> Mon–Fri: <strong>₹10,000 / nt</strong> (Free Breakfast)
+                  </span>
+                  <span className="htt-dot">✦</span>
+                  <span className="htt-item htt-item--gold">
+                    <Icon name="sun" size={14} /> Sat–Sun: <strong>₹12,000 / nt</strong> (Breakfast Included)
+                  </span>
+                  <span className="htt-dot">✦</span>
+                  <span className="htt-item">
+                    <Icon name="guests" size={14} /> <strong>1 to 6 Guests Flat Rate</strong>
+                  </span>
+                  <span className="htt-dot">✦</span>
+                  <span className="htt-item">
+                    <Icon name="clock" size={14} /> Check-in: <strong>11:00 AM</strong> · Check-out: <strong>10:00 AM</strong>
+                  </span>
+                  <span className="htt-dot">✦</span>
+                  <span className="htt-item htt-item--red">
+                    <Icon name="nopets" size={14} /> <strong>Strictly No Pets Allowed</strong>
+                  </span>
+                  <span className="htt-dot">✦</span>
+                  <span className="htt-item">
+                    <Icon name="road" size={14} /> <strong>Near Pondicherry on ECR</strong> (40 kms before, ~45m drive)
+                  </span>
+                  <span className="htt-dot">✦</span>
+                  <span className="htt-item htt-item--host">
+                    <Icon name="user" size={14} /> Host Ramesh: <strong>+91 99400 38374</strong> · GPay: <strong>99400 38363</strong>
+                  </span>
+                  <span className="htt-dot">✦</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

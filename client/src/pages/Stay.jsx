@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import Reveal from '../components/Reveal.jsx';
 import Icon from '../components/Icons.jsx';
 import Img from '../components/Img.jsx';
-import { ROOMS } from '../data/site.js';
+import { ROOMS, SITE, TARIFFS } from '../data/site.js';
 import { waLink } from '../lib/whatsapp.js';
 import { useParallax } from '../hooks/useParallax.js';
 
 function StayRoomCard({ room }) {
   const [activeIdx, setActiveIdx] = useState(0);
   const activeImg = room.images[activeIdx] || room.images[0];
-  const priceDisplay = room.price ? `₹ ${Number(room.price).toLocaleString('en-IN')}` : 'On Request';
+  const priceDisplay = room.price ? `₹ ${Number(room.price).toLocaleString('en-IN')}` : '₹ 10,000';
 
   return (
     <article className="stay-room-card">
@@ -23,6 +23,7 @@ function StayRoomCard({ room }) {
           className="stay-room-main-img"
         />
         <div className="stay-room-overlay-glare" />
+        <span className="stay-room-badge-pill">Free Breakfast</span>
       </div>
 
       {/* 4 Mini Thumbnails Row */}
@@ -55,19 +56,23 @@ function StayRoomCard({ room }) {
           </div>
           <div className="stay-room-spec-pill">
             <Icon name="guests" size={17} className="stay-room-spec-ico" />
-            <span>{room.guests}</span>
+            <span>Up to 6 Guests</span>
           </div>
         </div>
 
         {/* Price Row */}
         <div className="stay-room-pricing">
-          <span className="stay-room-price-val">{priceDisplay}</span>
-          <span className="stay-room-price-sub">/ night</span>
+          <div className="stay-room-price-stack">
+            <span className="stay-room-price-val">{priceDisplay}</span>
+            <span className="stay-room-price-sub">/ nt (Mon–Fri)</span>
+          </div>
+          <span className="stay-room-price-weekend">₹ 12,000 / nt (Sat–Sun)</span>
         </div>
+        <p className="stay-room-tariff-note">Flat tariff covers 1 to 6 people with free breakfast</p>
 
         {/* WhatsApp Booking Button */}
         <a
-          href={waLink(`Hello Sai Ranga Shores! I would like to enquire about booking the ${room.title}.`)}
+          href={waLink(`Hello Ramesh! I would like to enquire about staying at Sai Ranga Shores (${room.title}). We have 1 to 6 guests.`)}
           target="_blank"
           rel="noreferrer"
           className="stay-room-wa-btn"
@@ -191,7 +196,7 @@ export default function Stay() {
             <span className="stay-sub-eyebrow">ABOUT OUR PROPERTY</span>
             <h2 className="stay-property-title">A Serene Beachside Retreat</h2>
             <p className="stay-property-text">
-              Sai Ranga Shores Beach Home Stay offers a peaceful and comfortable stay just steps away from the beach. Surrounded by nature and the calming sound of the waves, it's the perfect place to relax, recharge and create lasting memories.
+              Sai Ranga Shores Beach Home Stay offers a peaceful and comfortable stay just steps away from the beach near Pondicherry on ECR. Located 40 kms before Pondicherry (a drive of 45 minutes to 1 hour depending on traffic and speed), our private beach home is surrounded by nature and the calming sound of waves—ideal for relaxing and recharging for up to 6 guests.
             </p>
 
             <div className="stay-prop-features-grid">
@@ -199,21 +204,35 @@ export default function Stay() {
                 <div className="stay-prop-feat-ico">
                   <Icon name="beach" size={26} />
                 </div>
-                <span className="stay-prop-feat-name">Beachside Location</span>
+                <span className="stay-prop-feat-name">Near Pondicherry on ECR</span>
               </div>
 
               <div className="stay-prop-feat">
                 <div className="stay-prop-feat-ico">
-                  <Icon name="leaf" size={26} />
+                  <Icon name="road" size={26} />
                 </div>
-                <span className="stay-prop-feat-name">Peaceful Environment</span>
+                <span className="stay-prop-feat-name">40 kms Before Pondicherry</span>
               </div>
 
               <div className="stay-prop-feat">
                 <div className="stay-prop-feat-ico">
-                  <Icon name="home" size={26} />
+                  <Icon name="clock" size={26} />
                 </div>
-                <span className="stay-prop-feat-name">Comfortable Stay</span>
+                <span className="stay-prop-feat-name">In: 11 AM | Out: 10 AM</span>
+              </div>
+
+              <div className="stay-prop-feat">
+                <div className="stay-prop-feat-ico">
+                  <Icon name="nopets" size={26} />
+                </div>
+                <span className="stay-prop-feat-name">No Pets Allowed</span>
+              </div>
+
+              <div className="stay-prop-feat">
+                <div className="stay-prop-feat-ico">
+                  <Icon name="coffee" size={26} />
+                </div>
+                <span className="stay-prop-feat-name">Free Breakfast</span>
               </div>
 
               <div className="stay-prop-feat">
@@ -233,11 +252,131 @@ export default function Stay() {
       <section className="stay-rooms-section" id="rooms">
         <div className="container">
           <Reveal className="stay-rooms-head">
-            <span className="stay-eyebrow-accent">— OUR ACCOMMODATIONS —</span>
-            <h2 className="stay-rooms-title">Deluxe Rooms, Suites &amp; Family Beach Stays</h2>
+            <span className="stay-eyebrow-accent">— OUR ACCOMMODATIONS &amp; TARIFFS —</span>
+            <h2 className="stay-rooms-title">Beach Home Stays &amp; Sea View Rooms</h2>
             <p className="stay-rooms-desc">
-              Whether you are looking for a deluxe sea view room near Pondicherry on ECR, a suite room on ECR, or a family room at our coastal beach resort, our accommodations provide the ideal beach house for family and leisure stays.
+              Experience the tranquility of a private beachfront retreat near Pondicherry on ECR. Sai Ranga Shores offers transparent tariffs with complimentary breakfast, accommodating up to 6 guests comfortably.
             </p>
+          </Reveal>
+
+          {/* Official Transparent Tariff Card */}
+          <Reveal delay={60} className="stay-tariff-banner">
+            <div className="stay-tariff-header">
+              <div className="stay-tariff-title-group">
+                <span className="stay-tariff-badge">OFFICIAL TARIFF &amp; RATES</span>
+                <h3 className="stay-tariff-title">Clear, Transparent Beach Home Rates</h3>
+                <p className="stay-tariff-subtitle">
+                  Both weekday and weekend tariffs accommodate <strong>1 to 6 people</strong> with <strong>complimentary breakfast</strong> included.
+                </p>
+                <div className="stay-location-badge-strip">
+                  <span className="stay-loc-chip">
+                    <Icon name="pin" size={14} /> Near Pondicherry on ECR
+                  </span>
+                  <span className="stay-loc-chip stay-loc-chip--dist">
+                    <Icon name="road" size={14} /> 40 kms before Pondicherry (45m–1h drive)
+                  </span>
+                </div>
+              </div>
+              <div className="stay-tariff-cap-group">
+                <div className="stay-tariff-cap-pill">
+                  <Icon name="guests" size={18} />
+                  <span>Max Capacity: <strong>6 People</strong></span>
+                </div>
+                <div className="stay-rules-mini-pills">
+                  <span className="stay-rule-pill">
+                    <Icon name="clock" size={14} /> Check-in: <strong>11:00 AM</strong>
+                  </span>
+                  <span className="stay-rule-pill">
+                    <Icon name="clock" size={14} /> Check-out: <strong>10:00 AM</strong>
+                  </span>
+                  <span className="stay-rule-pill stay-rule-pill--nopets">
+                    <Icon name="nopets" size={14} /> <strong>No Pets Allowed</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="stay-tariff-grid">
+              {/* Working Days Card */}
+              <div className="stay-tariff-card stay-tariff-card--weekday">
+                <div className="stay-tariff-top">
+                  <span className="stay-tariff-tag">Working Days (Mon – Fri)</span>
+                  <div className="stay-tariff-price">
+                    <span className="stay-tariff-currency">₹</span>
+                    <strong className="stay-tariff-amount">10,000</strong>
+                    <span className="stay-tariff-period">/ night</span>
+                  </div>
+                </div>
+                <ul className="stay-tariff-features">
+                  <li>
+                    <Icon name="coffee" size={16} className="stay-tariff-ico" />
+                    <span><strong>Free Breakfast</strong> included</span>
+                  </li>
+                  <li>
+                    <Icon name="guests" size={16} className="stay-tariff-ico" />
+                    <span>Flat rate for <strong>1 to 6 people</strong></span>
+                  </li>
+                  <li>
+                    <Icon name="clock" size={16} className="stay-tariff-ico" />
+                    <span>Check-in: <strong>11:00 AM</strong> | Check-out: <strong>10:00 AM</strong></span>
+                  </li>
+                  <li>
+                    <Icon name="sea" size={16} className="stay-tariff-ico" />
+                    <span>Full beach home &amp; sea-view rooms</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Weekend Card */}
+              <div className="stay-tariff-card stay-tariff-card--weekend">
+                <div className="stay-tariff-top">
+                  <span className="stay-tariff-tag stay-tariff-tag--popular">Saturday &amp; Sunday (Weekends)</span>
+                  <div className="stay-tariff-price">
+                    <span className="stay-tariff-currency">₹</span>
+                    <strong className="stay-tariff-amount">12,000</strong>
+                    <span className="stay-tariff-period">/ night</span>
+                  </div>
+                </div>
+                <ul className="stay-tariff-features">
+                  <li>
+                    <Icon name="coffee" size={16} className="stay-tariff-ico" />
+                    <span><strong>Breakfast Included</strong> on weekends</span>
+                  </li>
+                  <li>
+                    <Icon name="guests" size={16} className="stay-tariff-ico" />
+                    <span>Flat rate for <strong>1 to 6 people</strong></span>
+                  </li>
+                  <li>
+                    <Icon name="clock" size={16} className="stay-tariff-ico" />
+                    <span>Check-in: <strong>11:00 AM</strong> | Check-out: <strong>10:00 AM</strong></span>
+                  </li>
+                  <li>
+                    <Icon name="roof" size={16} className="stay-tariff-ico" />
+                    <span>360° observation tower pavilion</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Crucial Contact & GPay Quick Strip */}
+            <div className="stay-tariff-footer">
+              <a href="tel:+919940038374" className="stay-tariff-contact-pill">
+                <Icon name="phone" size={16} />
+                <span>Ramesh: <strong>+91 99400 38374</strong> (Cell &amp; WhatsApp)</span>
+              </a>
+              <div className="stay-tariff-contact-pill">
+                <Icon name="gpay" size={16} />
+                <span>GPay / UPI: <strong>99400 38363</strong></span>
+              </div>
+              <a href="mailto:rameshadiant@gmail.com" className="stay-tariff-contact-pill">
+                <Icon name="mail" size={16} />
+                <span><strong>rameshadiant@gmail.com</strong></span>
+              </a>
+              <div className="stay-tariff-contact-pill stay-tariff-contact-pill--pets">
+                <Icon name="nopets" size={16} />
+                <span>Strict Policy: <strong>No Pets Allowed</strong></span>
+              </div>
+            </div>
           </Reveal>
 
           <div className="stay-rooms-grid">

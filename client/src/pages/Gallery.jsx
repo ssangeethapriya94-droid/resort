@@ -9,7 +9,7 @@ export default function Gallery() {
         title="Sai Ranga Shores Photos"
         script="&amp; Beach Gallery"
       >
-        Explore real Sai Ranga Shores photos in our beachfront resort Pondicherry gallery. Discover sea view room photos, breathtaking Pondicherry sunrise photos, coastal waves, and panoramic 360° observation tower views overlooking the Bay of Bengal.
+        Explore real Sai Ranga Shores photos in our gallery, located near Pondicherry on ECR (40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed). Discover sea view room photos, breathtaking golden sunrise views, coastal surf, and panoramic 360° observation tower vistas overlooking the Bay of Bengal.
       </PageHeader>
 
       <section className="gallery-main-section">

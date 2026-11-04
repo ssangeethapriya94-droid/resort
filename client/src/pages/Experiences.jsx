@@ -32,7 +32,7 @@ export default function Experiences() {
           </div>
         }
       >
-        Discover top things to do in Pondicherry—from quiet beach walks and early Pondicherry sunrise views at our doorstep to French Quarter heritage walks, scenic coastal boating, and authentic local food and markets.
+        Discover top coastal things to do near Pondicherry on ECR—situated 40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed. Enjoy quiet beach walks at our doorstep, French Quarter heritage tours, and authentic local cuisine.
       </PageHeader>
 
       {/* ──────────────────────────────────────────────────────────
@@ -48,10 +48,10 @@ export default function Experiences() {
             <div className="exp-showcase-heading-group">
               <span className="exp-showcase-eyebrow">— COASTAL &amp; CULTURAL ACTIVITIES —</span>
               <h2 className="exp-showcase-title">
-                Memorable Experiences in <span className="script">Pondicherry</span>
+                Memorable Experiences <span className="script">near Pondicherry on ECR</span>
               </h2>
               <p className="exp-showcase-intro">
-                From peaceful beach walks and golden sunrise views to local heritage explorations, Sai Ranga Shores provides an ideal coastal retreat to enjoy the finest things to do in Pondicherry.
+                Located near Pondicherry on ECR (40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed), Sai Ranga Shores provides an ideal coastal retreat away from crowds while keeping Pondicherry easily accessible.
               </p>
             </div>
 
@@ -117,8 +117,11 @@ export default function Experiences() {
       <section className="section section--tint">
         <div className="container">
           <Reveal className="section-head">
-            <p className="eyebrow">Around Pondicherry</p>
-            <h2>Worth the <span className="script">drive</span></h2>
+            <p className="eyebrow">Around the Region</p>
+            <h2>Scenic Day Trips <span className="script">near Pondicherry on ECR</span></h2>
+            <p className="section-sub-lead" style={{ maxWidth: 720, margin: '0.6rem auto 0', color: '#5B727D', fontSize: '0.92rem' }}>
+              Sai Ranga Shores is situated 40 kms before Pondicherry (a drive of 45 minutes to 1 hour depending on traffic and speed), placing you within easy driving distance to Pondicherry’s iconic attractions.
+            </p>
           </Reveal>
           <div className="ngrid">
             {NEARBY.map((n, i) => (

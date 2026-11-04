@@ -50,6 +50,11 @@ const PATHS = {
   send: <><line x1="22" y1="2" x2="11" y2="13" {...P} /><polygon points="22 2 15 22 11 13 2 9 22 2" {...P} /></>,
   lightning: <><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" {...P} /></>,
   bell: <><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" {...P} /><path d="M13.73 21a2 2 0 0 1-3.46 0" {...P} /></>,
+  gpay: <><rect x="3" y="5" width="18" height="14" rx="3" {...P} /><path d="M7 15h3M7 9h6M7 12h8" {...P} /><circle cx="17" cy="15" r="1.2" fill="currentColor" /></>,
+  coffee: <><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 2v3M10 2v3M14 2v3" {...P} /></>,
+  clock: <><circle cx="12" cy="12" r="9" {...P} /><polyline points="12 7 12 12 15 14" {...P} /></>,
+  nopets: <><circle cx="12" cy="12" r="9.5" {...P} /><line x1="5.2" y1="5.2" x2="18.8" y2="18.8" stroke="currentColor" strokeWidth={1.8} /><circle cx="8.5" cy="9" r="1.2" fill="currentColor" /><circle cx="15.5" cy="9" r="1.2" fill="currentColor" /><circle cx="12" cy="7" r="1.2" fill="currentColor" /><circle cx="12" cy="14" r="2" {...P} /></>,
+  road: <><path d="M4 19L8 5M20 19L16 5M12 7v2M12 14v2" {...P} /></>,
 };
 
 export default function Icon({ name, size = 24, className = '', title }) {
