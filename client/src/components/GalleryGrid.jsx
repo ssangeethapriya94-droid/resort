@@ -7,6 +7,7 @@ import { waLink } from '../lib/whatsapp.js';
 const FILTER_ICONS = {
   'All': 'spark',
   'Resort & Tower': 'home',
+  'Swimming Pool': 'pool',
   'Rooms': 'bed',
   'Sea & Beach': 'sea',
   'Sunrise & Sunset': 'sun',

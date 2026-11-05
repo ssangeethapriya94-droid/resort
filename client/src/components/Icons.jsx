@@ -55,6 +55,7 @@ const PATHS = {
   clock: <><circle cx="12" cy="12" r="9" {...P} /><polyline points="12 7 12 12 15 14" {...P} /></>,
   nopets: <><circle cx="12" cy="12" r="9.5" {...P} /><line x1="5.2" y1="5.2" x2="18.8" y2="18.8" stroke="currentColor" strokeWidth={1.8} /><circle cx="8.5" cy="9" r="1.2" fill="currentColor" /><circle cx="15.5" cy="9" r="1.2" fill="currentColor" /><circle cx="12" cy="7" r="1.2" fill="currentColor" /><circle cx="12" cy="14" r="2" {...P} /></>,
   road: <><path d="M4 19L8 5M20 19L16 5M12 7v2M12 14v2" {...P} /></>,
+  pool: <><path d="M2 20c2.5-1 4.5-1 7 0s4.5 1 7 0 3-1 5 0" {...P} /><path d="M2 16.5c2.5-1 4.5-1 7 0s4.5 1 7 0 3-1 5 0" {...P} /><path d="M6 3v9M10 3v9M6 7h4" {...P} /><path d="M6 3a2 2 0 0 0-2-2M10 3a2 2 0 0 1 2-2" {...P} /></>,
 };
 
 export default function Icon({ name, size = 24, className = '', title }) {

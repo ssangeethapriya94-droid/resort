@@ -30,12 +30,12 @@ const CYLINDER_PHOTOS = [
     alt: 'Sai Ranga Shores entrance, parking driveway and viewing tower',
   },
   {
-    id: 'img-3413',
-    name: 'img-3413',
-    title: 'Golden Sunrise',
-    tag: 'Sea Horizon',
-    caption: 'Watching dawn illuminate the water through swaying palms',
-    alt: 'Golden morning sunrise reflecting on the ocean through coconut palms',
+    id: 'pool-day',
+    name: 'pool-day',
+    title: 'Private Swimming Pool',
+    tag: 'Plunge & Relax',
+    caption: 'Cool off under the colorful sun canopy with pool loungers and floats',
+    alt: 'Private swimming pool with colorful shade canopy and floats at Sai Ranga Shores',
   },
   {
     id: 'img-0094',

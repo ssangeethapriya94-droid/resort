@@ -222,16 +222,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Stay In Comfort — Our Rooms Section */}
+      {/* 3. Stay In Comfort — Entire 2 BHK Beach Villa Homestay */}
       <section id="rooms" className="home-rooms-section">
         <Frond className="home-rooms-frond--right" seed={13} color="#1d4d3a" />
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="home-eyebrow">— COASTAL BEACH STAY ON ECR —</p>
-              <h2 className="home-section-title">Sea View Rooms &amp; Suites</h2>
+              <p className="home-eyebrow">— ENTIRE 2 BHK BEACH VILLA HOMESTAY —</p>
+              <h2 className="home-section-title">2 BHK Villa Spaces &amp; Bedrooms</h2>
               <p className="home-section-sub">
-                Spacious sea view rooms near Pondicherry on ECR — 40 kms before Pondicherry, a drive of 45 minutes to 1 hour depending on traffic and speed. Wake up to ocean sunrises and gentle sea breezes.
+                We offer the entire 2 BHK beach villa as a private homestay near Pondicherry on ECR (we do not rent individual rooms). Enjoy exclusive access to all bedrooms, sea-view lounge, and observation tower for up to 6 guests with complimentary breakfast.
               </p>
             </div>
             <Link to="/stay" className="home-section-link">
@@ -239,7 +239,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* The 3 Room Cards Appear Immediately Without Any Blocking Box */}
+          {/* The 3 Villa Spaces Appear Immediately — No Per-Room Rates */}
           <div className="home-rooms-grid">
             {ROOMS.map((room) => (
               <div key={room.id} className="home-room-card">
@@ -249,7 +249,7 @@ export default function Home() {
                     alt={room.title}
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
-                  <span className="home-room-breakfast-badge">Free Breakfast</span>
+                  <span className="home-room-breakfast-badge">Entire Villa Stay</span>
                 </div>
 
                 <div className="home-room-content">
@@ -278,22 +278,18 @@ export default function Home() {
                   </div>
 
                   <div className="home-room-bottom">
-                    <div className="home-room-price">
-                      <div className="home-price-main-line">
-                        <span className="home-price-from">From </span>
-                        <strong className="home-price-amount">₹{room.price.toLocaleString()}</strong>
-                        <span className="home-price-unit"> / nt (Mon–Fri)</span>
-                      </div>
-                      <span className="home-price-weekend-note">₹12,000 / nt (Sat–Sun) • 1 to 6 Guests</span>
+                    <div className="home-room-villa-pill">
+                      <span className="home-room-villa-scope">✓ Part of Entire 2 BHK Villa</span>
+                      <span className="home-room-villa-note">All rooms included in your private booking (up to 6 guests)</span>
                     </div>
 
                     <a
-                      href={waLink(`Hello Ramesh! I would like to book a stay at Sai Ranga Shores (${room.title}) for up to 6 guests.`)}
+                      href={waLink(`Hello Ramesh! I would like to book the Entire 2 BHK Beach Villa at Sai Ranga Shores for up to 6 guests.`)}
                       target="_blank"
                       rel="noreferrer"
                       className="btn btn--primary home-room-btn"
                     >
-                      Book Now <Icon name="arrow" size={14} />
+                      Book Entire 2 BHK Villa <Icon name="arrow" size={14} />
                     </a>
                   </div>
                 </div>
@@ -311,9 +307,9 @@ export default function Home() {
         <div className="container">
           <div className="home-section-header home-section-header--center">
             <p className="home-eyebrow">— TRANSPARENT ALL-INCLUSIVE RATES —</p>
-            <h2 className="home-section-title">Beach House Tariffs &amp; Stay Rules</h2>
+            <h2 className="home-section-title">Entire 2 BHK Villa Tariffs &amp; Stay Rules</h2>
             <p className="home-section-sub home-section-sub--center">
-              Clear, honest pricing with zero hidden fees. Flat tariff covers your stay for 1 to 6 people with complimentary breakfast. Situated near Pondicherry on ECR (40 kms before Pondicherry, 45m–1h scenic coastal drive).
+              Clear, honest pricing with zero hidden fees. Flat tariff covers the entire 2 BHK private beach villa homestay for 1 to 6 people with complimentary breakfast (we do not let individual rooms). Situated near Pondicherry on ECR (40 kms before Pondicherry, 45m–1h scenic coastal drive).
             </p>
           </div>
 
@@ -356,9 +352,8 @@ export default function Home() {
             <div className="home-tariffs-rates-col">
               {/* Card 1: Working Days (Mon–Fri) */}
               <div
-                className={`home-rate-card home-rate-card--weekday ${
-                  tariffHighlight === 'weekend' ? 'is-dimmed' : ''
-                } ${tariffHighlight === 'weekday' ? 'is-focused' : ''}`}
+                className={`home-rate-card home-rate-card--weekday ${tariffHighlight === 'weekend' ? 'is-dimmed' : ''
+                  } ${tariffHighlight === 'weekday' ? 'is-focused' : ''}`}
               >
                 <div className="home-rate-card-head">
                   <div className="home-rate-badge home-rate-badge--green">
@@ -393,9 +388,8 @@ export default function Home() {
 
               {/* Card 2: Weekends (Sat & Sun) */}
               <div
-                className={`home-rate-card home-rate-card--weekend ${
-                  tariffHighlight === 'weekday' ? 'is-dimmed' : ''
-                } ${tariffHighlight === 'weekend' ? 'is-focused' : ''}`}
+                className={`home-rate-card home-rate-card--weekend ${tariffHighlight === 'weekday' ? 'is-dimmed' : ''
+                  } ${tariffHighlight === 'weekend' ? 'is-focused' : ''}`}
               >
                 <div className="home-rate-card-head">
                   <div className="home-rate-badge home-rate-badge--gold">
@@ -561,6 +555,71 @@ export default function Home() {
                   <span className="htt-dot">✦</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3B. Private Swimming Pool Showcase */}
+      <section className="villa-pool-section" id="pool">
+        <div className="container">
+          <div className="villa-pool-header">
+            <p className="home-eyebrow">— EXCLUSIVE VILLA AMENITY —</p>
+            <h2 className="home-section-title">Private Swimming Pool &amp; Plunge Deck</h2>
+            <p className="villa-pool-sub">
+              Cool off, splash, and unwind in your private swimming pool — reserved exclusively for your booking (never shared). Whether relaxing on floating loungers beneath the sunshade canopy by day or enjoying an illuminated evening swim under ambient lighting, your private oasis awaits.
+            </p>
+          </div>
+
+          <div className="villa-pool-grid">
+            {/* Daytime Card */}
+            <div className="villa-pool-card">
+              <div className="villa-pool-img-wrap">
+                <Img
+                  name="pool-day"
+                  alt="Private sheltered swimming pool at Sai Ranga Shores with colorful sunshade canopy and floating lounger"
+                  sizes="(max-width: 860px) 100vw, 50vw"
+                />
+                <span className="villa-pool-tag villa-pool-tag--day">
+                  <Icon name="sun" size={14} /> Daytime Splash &amp; Lounging
+                </span>
+              </div>
+              <div className="villa-pool-card-body">
+                <h3 className="villa-pool-card-title">Sheltered Day Plunge</h3>
+                <p className="villa-pool-card-text">
+                  Vibrant blue sheltered canopy protects you from direct noon sun so you can swim comfortably throughout the day. Includes relaxing water floats and poolside sun deck.
+                </p>
+                <div className="villa-pool-chips">
+                  <span>✓ Sunshade Canopy</span>
+                  <span>✓ Pool Floats &amp; Loungers</span>
+                  <span>✓ 100% Private Access</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Night-time Card */}
+            <div className="villa-pool-card">
+              <div className="villa-pool-img-wrap">
+                <Img
+                  name="pool-night"
+                  alt="Illuminated private swimming pool at night with ambient underwater lighting at Sai Ranga Shores"
+                  sizes="(max-width: 860px) 100vw, 50vw"
+                />
+                <span className="villa-pool-tag villa-pool-tag--night">
+                  <Icon name="spark" size={14} /> Night Ambient Illumination
+                </span>
+              </div>
+              <div className="villa-pool-card-body">
+                <h3 className="villa-pool-card-title">Illuminated Evening Swims</h3>
+                <p className="villa-pool-card-text">
+                  Take a serene, refreshing dip after sunset with ambient underwater lighting, surrounded by coastal breezes and tranquil night ambiance under the stars.
+                </p>
+                <div className="villa-pool-chips">
+                  <span>✓ Underwater Night Lights</span>
+                  <span>✓ Stainless Steel Ladder</span>
+                  <span>✓ Included with Villa Stay</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

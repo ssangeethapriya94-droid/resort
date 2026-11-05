@@ -60,25 +60,23 @@ function StayRoomCard({ room }) {
           </div>
         </div>
 
-        {/* Price Row */}
-        <div className="stay-room-pricing">
-          <div className="stay-room-price-stack">
-            <span className="stay-room-price-val">{priceDisplay}</span>
-            <span className="stay-room-price-sub">/ nt (Mon–Fri)</span>
-          </div>
-          <span className="stay-room-price-weekend">₹ 12,000 / nt (Sat–Sun)</span>
+        {/* Villa Homestay Inclusion Notice — No Per-Room Rates */}
+        <div className="stay-room-villa-box">
+          <span className="stay-room-villa-pill">✓ Part of Entire 2 BHK Villa Homestay</span>
+          <p className="stay-room-villa-desc">
+            Included in your private 2 BHK villa booking (up to 6 guests). We do not let individual rooms separately.
+          </p>
         </div>
-        <p className="stay-room-tariff-note">Flat tariff covers 1 to 6 people with free breakfast</p>
 
         {/* WhatsApp Booking Button */}
         <a
-          href={waLink(`Hello Ramesh! I would like to enquire about staying at Sai Ranga Shores (${room.title}). We have 1 to 6 guests.`)}
+          href={waLink(`Hello Ramesh! I would like to book the Entire 2 BHK Beach Villa at Sai Ranga Shores near Pondicherry on ECR.`)}
           target="_blank"
           rel="noreferrer"
           className="stay-room-wa-btn"
         >
           <Icon name="whatsapp" size={18} className="stay-room-wa-ico" />
-          <span>WhatsApp Enquiry</span>
+          <span>Book Entire 2 BHK Villa</span>
         </a>
       </div>
     </article>
@@ -230,6 +228,13 @@ export default function Stay() {
 
               <div className="stay-prop-feat">
                 <div className="stay-prop-feat-ico">
+                  <Icon name="pool" size={26} />
+                </div>
+                <span className="stay-prop-feat-name">Private Swimming Pool</span>
+              </div>
+
+              <div className="stay-prop-feat">
+                <div className="stay-prop-feat-ico">
                   <Icon name="coffee" size={26} />
                 </div>
                 <span className="stay-prop-feat-name">Free Breakfast</span>
@@ -247,15 +252,15 @@ export default function Stay() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────
-          3. OUR ROOMS SECTION (3 CARDS WITH 4 THUMBNAILS EACH)
+          3. ENTIRE 2 BHK VILLA SPACES & BEDROOMS
       ────────────────────────────────────────────────────────── */}
       <section className="stay-rooms-section" id="rooms">
         <div className="container">
           <Reveal className="stay-rooms-head">
-            <span className="stay-eyebrow-accent">— OUR ACCOMMODATIONS &amp; TARIFFS —</span>
-            <h2 className="stay-rooms-title">Beach Home Stays &amp; Sea View Rooms</h2>
+            <span className="stay-eyebrow-accent">— ENTIRE 2 BHK VILLA HOMESTAY —</span>
+            <h2 className="stay-rooms-title">Private 2 BHK Villa Spaces &amp; Bedrooms</h2>
             <p className="stay-rooms-desc">
-              Experience the tranquility of a private beachfront retreat near Pondicherry on ECR. Sai Ranga Shores offers transparent tariffs with complimentary breakfast, accommodating up to 6 guests comfortably.
+              Rented exclusively as an Entire 2 BHK Beach Villa Homestay near Pondicherry on ECR (we do not rent individual rooms separately). Up to 6 guests enjoy private, exclusive access to both bedrooms, sea-view lounge, sunrise terrace, and coconut lawns with complimentary breakfast.
             </p>
           </Reveal>
 
@@ -390,6 +395,73 @@ export default function Stay() {
       </section>
 
       {/* ──────────────────────────────────────────────────────────
+          3B. PRIVATE SWIMMING POOL SHOWCASE
+      ────────────────────────────────────────────────────────── */}
+      <section className="villa-pool-section" id="pool">
+        <div className="container">
+          <Reveal className="villa-pool-header">
+            <span className="stay-eyebrow-accent">— EXCLUSIVE VILLA AMENITY —</span>
+            <h2 className="home-section-title">Private Swimming Pool &amp; Plunge Deck</h2>
+            <p className="villa-pool-sub">
+              Cool off, splash, and unwind in your private swimming pool — reserved exclusively for your booking (never shared). Whether relaxing on floating loungers beneath the sunshade canopy by day or enjoying an illuminated evening swim under ambient lighting, your private oasis awaits.
+            </p>
+          </Reveal>
+
+          <div className="villa-pool-grid">
+            {/* Daytime Card */}
+            <Reveal delay={80} className="villa-pool-card">
+              <div className="villa-pool-img-wrap">
+                <Img
+                  name="pool-day"
+                  alt="Private sheltered swimming pool at Sai Ranga Shores with colorful sunshade canopy and floating lounger"
+                  sizes="(max-width: 860px) 100vw, 50vw"
+                />
+                <span className="villa-pool-tag villa-pool-tag--day">
+                  <Icon name="sun" size={14} /> Daytime Splash &amp; Lounging
+                </span>
+              </div>
+              <div className="villa-pool-card-body">
+                <h3 className="villa-pool-card-title">Sheltered Day Plunge</h3>
+                <p className="villa-pool-card-text">
+                  Vibrant blue sheltered canopy protects you from direct noon sun so you can swim comfortably throughout the day. Includes relaxing water floats and poolside sun deck.
+                </p>
+                <div className="villa-pool-chips">
+                  <span>✓ Sunshade Canopy</span>
+                  <span>✓ Pool Floats &amp; Loungers</span>
+                  <span>✓ 100% Private Access</span>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Night-time Card */}
+            <Reveal delay={160} className="villa-pool-card">
+              <div className="villa-pool-img-wrap">
+                <Img
+                  name="pool-night"
+                  alt="Illuminated private swimming pool at night with ambient underwater lighting at Sai Ranga Shores"
+                  sizes="(max-width: 860px) 100vw, 50vw"
+                />
+                <span className="villa-pool-tag villa-pool-tag--night">
+                  <Icon name="spark" size={14} /> Night Ambient Illumination
+                </span>
+              </div>
+              <div className="villa-pool-card-body">
+                <h3 className="villa-pool-card-title">Illuminated Evening Swims</h3>
+                <p className="villa-pool-card-text">
+                  Take a serene, refreshing dip after sunset with ambient underwater lighting, surrounded by coastal breezes and tranquil night ambiance under the stars.
+                </p>
+                <div className="villa-pool-chips">
+                  <span>✓ Underwater Night Lights</span>
+                  <span>✓ Stainless Steel Ladder</span>
+                  <span>✓ Included with Villa Stay</span>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ──────────────────────────────────────────────────────────
           4. MOMENTS AT SAI RANGA SHORES (GALLERY STRIP)
       ────────────────────────────────────────────────────────── */}
       <section className="stay-gallery-strip-section" aria-label="Moments Gallery">
@@ -397,7 +469,7 @@ export default function Stay() {
           {/* 4 Panoramic Photos Side-by-Side */}
           <Reveal className="stay-gallery-photos-row">
             <div className="stay-strip-photo-item">
-              <Img name="palms-sea" alt="Pondicherry coastal beach and palm trees" sizes="(max-width: 900px) 50vw, 25vw" className="stay-strip-img" />
+              <Img name="pool-day" alt="Private swimming pool with colorful canopy at Sai Ranga Shores" sizes="(max-width: 900px) 50vw, 25vw" className="stay-strip-img" />
               <div className="stay-strip-overlay" />
             </div>
             <div className="stay-strip-photo-item">
@@ -405,7 +477,7 @@ export default function Stay() {
               <div className="stay-strip-overlay" />
             </div>
             <div className="stay-strip-photo-item">
-              <Img name="img-2784" alt="Golden sunset silhouette on the shore" sizes="(max-width: 900px) 50vw, 25vw" className="stay-strip-img" />
+              <Img name="pool-night" alt="Private swimming pool illuminated at night at Sai Ranga Shores" sizes="(max-width: 900px) 50vw, 25vw" className="stay-strip-img" />
               <div className="stay-strip-overlay" />
             </div>
             <div className="stay-strip-photo-item">

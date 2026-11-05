@@ -96,18 +96,21 @@ export const NAV = [
 // Amenities shown on the Home page strip. TODO: confirm WiFi / parking with the client.
 export const AMENITIES = [
   { icon: 'sea', title: 'Sea View Rooms', text: 'Wake up to the horizon' },
+  { icon: 'pool', title: 'Private Swimming Pool', text: 'Day & night plunge pool' },
   { icon: 'beach', title: 'Beach Access', text: 'Sand a short walk away' },
   { icon: 'wifi', title: 'Free WiFi', text: 'Stay connected' },
   { icon: 'parking', title: 'Parking', text: 'Space for your car' },
   { icon: 'food', title: 'Local Experiences', text: 'Boats, food and heritage' },
 ];
 
-// Entire Beach Home Stay: Tariffs apply from 1 to 6 people (₹10,000 on working days, ₹12,000 on Sat & Sun with breakfast).
+// Entire 2 BHK Beach Villa Homestay: All rooms/spaces are included in the single booking.
+// Tariffs apply to the entire 2 BHK villa from 1 to 6 people (₹10,000 on Mon–Fri, ₹12,000 on Sat & Sun with free breakfast).
+// Individual rooms are NOT let separately.
 export const ROOMS = [
   {
     id: 'deluxe-room',
     title: 'Deluxe Sea View Room',
-    guests: 'Up to 6 Guests (Total Stay)',
+    guests: 'Included in 2 BHK Villa (Up to 6 Guests)',
     bed: '1 King Bed',
     view: 'Sea View',
     ac: 'AC',
@@ -115,10 +118,10 @@ export const ROOMS = [
     breakfast: 'Free Breakfast Included',
     price: 10000,
     priceWeekend: 12000,
-    priceDisplay: 'From ₹10,000 / night',
-    priceNote: '₹10,000 Mon–Fri · ₹12,000 Sat & Sun (1 to 6 Guests)',
+    priceDisplay: 'Included in Entire 2 BHK Villa',
+    priceNote: 'Entire Villa: ₹10,000 Mon–Fri · ₹12,000 Sat–Sun (1 to 6 Guests)',
     image: 'img-4941',
-    blurb: 'A cozy and comfortable deluxe sea view room in Pondicherry with wraparound windows and coastal breezes, part of our private beach home for up to 6 guests.',
+    blurb: 'A cozy and comfortable deluxe sea view bedroom with wraparound windows and coastal breezes, part of the entire private 2 BHK beach villa homestay for up to 6 guests.',
     features: ['Wraparound sea-view windows', 'Free breakfast included', 'Marble floors & AC', 'Rooftop pavilion access'],
     images: [
       { name: 'img-4941', alt: 'Deluxe sea view room panoramic bedroom with ocean windows' },
@@ -130,7 +133,7 @@ export const ROOMS = [
   {
     id: 'family-room',
     title: 'Family Sea View Room',
-    guests: 'Up to 6 Guests (Total Stay)',
+    guests: 'Included in 2 BHK Villa (Up to 6 Guests)',
     bed: '1 King + 1 Twin Bed',
     view: 'Sea View',
     ac: 'AC',
@@ -138,10 +141,10 @@ export const ROOMS = [
     breakfast: 'Free Breakfast Included',
     price: 10000,
     priceWeekend: 12000,
-    priceDisplay: 'From ₹10,000 / night',
-    priceNote: '₹10,000 Mon–Fri · ₹12,000 Sat & Sun (1 to 6 Guests)',
+    priceDisplay: 'Included in Entire 2 BHK Villa',
+    priceNote: 'Entire Villa: ₹10,000 Mon–Fri · ₹12,000 Sat–Sun (1 to 6 Guests)',
     image: 'img-4872',
-    blurb: 'A spacious family room at our Pondicherry beach home, offering an ideal coastal getaway for family vacations with ocean vistas and generous space.',
+    blurb: 'A spacious family bedroom offering an ideal coastal getaway for family vacations with ocean vistas and generous space, included with your 2 BHK villa stay.',
     features: ['Direct ocean vista', 'Dual king & twin bedding', 'Complimentary breakfast', 'High-speed Wi-Fi & AC'],
     images: [
       { name: 'img-4872', alt: 'Spacious family room at Pondicherry beach resort' },
@@ -153,7 +156,7 @@ export const ROOMS = [
   {
     id: 'suite-room',
     title: 'Suite Sea View Room',
-    guests: 'Up to 6 Guests (Total Stay)',
+    guests: 'Included in 2 BHK Villa (Up to 6 Guests)',
     bed: '1 King Bed + Living Area',
     view: 'Sea View',
     ac: 'AC',
@@ -161,10 +164,10 @@ export const ROOMS = [
     breakfast: 'Free Breakfast Included',
     price: 10000,
     priceWeekend: 12000,
-    priceDisplay: 'From ₹10,000 / night',
-    priceNote: '₹10,000 Mon–Fri · ₹12,000 Sat & Sun (1 to 6 Guests)',
+    priceDisplay: 'Included in Entire 2 BHK Villa',
+    priceNote: 'Entire Villa: ₹10,000 Mon–Fri · ₹12,000 Sat–Sun (1 to 6 Guests)',
     image: 'img-9382-effects',
-    blurb: 'An expansive suite room in Pondicherry with a separate living area, panoramic sea views, and direct rooftop observation tower access for up to 6 guests.',
+    blurb: 'An expansive master suite with separate living area, panoramic sea views, and direct rooftop observation tower access, part of the entire 2 BHK villa homestay.',
     features: ['Panoramic rooftop ocean view', 'Complimentary breakfast', 'Breezy pavilion access', 'Dedicated work desk & AC'],
     images: [
       { name: 'img-9382-effects', alt: 'Panoramic rooftop ocean view from suite room pavilion' },
@@ -176,6 +179,7 @@ export const ROOMS = [
 ];
 
 export const FACILITIES = [
+  { icon: 'pool', title: 'Private Swimming Pool', text: 'Refreshing sheltered plunge pool with daytime loungers & night lighting' },
   { icon: 'beach', title: 'Beach Access', text: 'Sand just steps away near Pondicherry on ECR' },
   { icon: 'roof', title: 'Rooftop Pavilion', text: 'Sunrise coffee and panoramic 360° ocean views' },
   { icon: 'clock', title: 'Check-in & Check-out', text: 'Check-in: 11:00 AM • Check-out: 10:00 AM' },
@@ -233,7 +237,7 @@ export const DAY_CYCLE = [
 ];
 
 // GALLERY. category must be one of GALLERY_FILTERS
-export const GALLERY_FILTERS = ['All', 'Resort & Tower', 'Rooms', 'Sea & Beach', 'Sunrise & Sunset', 'Night & Moon', 'Garden'];
+export const GALLERY_FILTERS = ['All', 'Resort & Tower', 'Swimming Pool', 'Rooms', 'Sea & Beach', 'Sunrise & Sunset', 'Night & Moon', 'Garden'];
 export const GALLERY = [
   // 1. Resort & Tower
   { name: 'img-9382-effects', cat: 'Resort & Tower', alt: 'Sai Ranga Shores photos: panoramic morning view of the resort and ocean' },
@@ -242,6 +246,10 @@ export const GALLERY = [
   { name: 'img-0125', cat: 'Resort & Tower', alt: 'Beachfront resort Pondicherry gallery: entrance, parking & observation tower' },
   { name: 'img-9141', cat: 'Resort & Tower', alt: 'Observation tower view Pondicherry from breezy rooftop pavilion sit-out' },
   { name: 'tower', cat: 'Resort & Tower', alt: 'Sai Ranga Shores observation tower and coastal building' },
+
+  // 2. Swimming Pool
+  { name: 'pool-day', cat: 'Swimming Pool', alt: 'Private sheltered swimming pool at Sai Ranga Shores with colorful sunshade canopy and loungers' },
+  { name: 'pool-night', cat: 'Swimming Pool', alt: 'Illuminated private swimming pool at night with ambient lighting and ladder rails' },
 
   // 2. Rooms & Suites
   { name: 'img-4941', cat: 'Rooms', alt: 'Sea view room photos Pondicherry: panoramic suite bedroom with wraparound ocean windows' },
