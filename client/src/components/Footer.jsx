@@ -27,7 +27,7 @@ export default function Footer() {
                 <Logo light />
               </div>
               <p className="footer-brand-bio">
-                A serene beachfront retreat on the quiet shores of Pondicherry.
+                A serene beachfront retreat on the quiet shores near Pondicherry.
                 Experience calm sea-view rooms, a 360° rooftop viewing tower, and warm homestyle hospitality.
               </p>
               <div className="footer-badges">

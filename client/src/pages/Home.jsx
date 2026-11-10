@@ -715,6 +715,13 @@ export default function Home() {
               >
                 <Icon name="whatsapp" size={19} /> WhatsApp Us
               </a>
+              <a
+                className="btn btn--ghost-light"
+                href={`tel:${SITE.phones[0].tel}`}
+                title="Call Ramesh on +91 99400 38374"
+              >
+                <Icon name="phone" size={17} /> Call Us
+              </a>
               <Link className="btn btn--ghost-light" to="/contact">
                 Book Now <Icon name="arrow" size={15} />
               </Link>

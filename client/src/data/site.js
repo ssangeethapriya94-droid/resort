@@ -147,7 +147,7 @@ export const ROOMS = [
     blurb: 'A spacious family bedroom offering an ideal coastal getaway for family vacations with ocean vistas and generous space, included with your 2 BHK villa stay.',
     features: ['Direct ocean vista', 'Dual king & twin bedding', 'Complimentary breakfast', 'High-speed Wi-Fi & AC'],
     images: [
-      { name: 'img-4872', alt: 'Spacious family room at Pondicherry beach resort' },
+      { name: 'img-4872', alt: 'Spacious family room at beach house' },
       { name: 'img-4942', alt: 'Ocean window vista from family room' },
       { name: 'room-interior', alt: 'Sea view family room bedroom interior' },
       { name: 'window-view2', alt: 'Family beach stay balcony view of the sea' },
@@ -242,43 +242,43 @@ export const GALLERY = [
   // 1. Resort & Tower
   { name: 'img-9382-effects', cat: 'Resort & Tower', alt: 'Sai Ranga Shores photos: panoramic morning view of the resort and ocean' },
   { name: 'image-1', cat: 'Resort & Tower', alt: 'Sai Ranga Shores observation tower view illuminated at twilight' },
-  { name: 'img-0095', cat: 'Resort & Tower', alt: 'Observation tower view Pondicherry framed by tropical coconut palms' },
-  { name: 'img-0125', cat: 'Resort & Tower', alt: 'Beachfront resort Pondicherry gallery: entrance, parking & observation tower' },
-  { name: 'img-9141', cat: 'Resort & Tower', alt: 'Observation tower view Pondicherry from breezy rooftop pavilion sit-out' },
+  { name: 'img-0095', cat: 'Resort & Tower', alt: 'Observation tower view at beach house framed by tropical coconut palms' },
+  { name: 'img-0125', cat: 'Resort & Tower', alt: 'Beach house gallery: entrance, parking & observation tower' },
+  { name: 'img-9141', cat: 'Resort & Tower', alt: 'Observation tower view from breezy rooftop pavilion sit-out' },
   { name: 'tower', cat: 'Resort & Tower', alt: 'Sai Ranga Shores observation tower and coastal building' },
 
   // 2. Swimming Pool
   { name: 'pool-day', cat: 'Swimming Pool', alt: 'Private sheltered swimming pool at Sai Ranga Shores with colorful sunshade canopy and loungers' },
   { name: 'pool-night', cat: 'Swimming Pool', alt: 'Illuminated private swimming pool at night with ambient lighting and ladder rails' },
 
-  // 2. Rooms & Suites
-  { name: 'img-4941', cat: 'Rooms', alt: 'Sea view room photos Pondicherry: panoramic suite bedroom with wraparound ocean windows' },
-  { name: 'img-4872', cat: 'Rooms', alt: 'Sea view room photos Pondicherry: spacious family room with ocean vista windows' },
+  // 3. Rooms & Suites
+  { name: 'img-4941', cat: 'Rooms', alt: 'Sea view room photos at beach house: panoramic suite bedroom with wraparound ocean windows' },
+  { name: 'img-4872', cat: 'Rooms', alt: 'Sea view room photos at beach house: spacious family room with ocean vista windows' },
   { name: 'img-4942', cat: 'Rooms', alt: 'Sea view room photo of ocean and palm horizon from bedroom window' },
-  { name: 'room-pano', cat: 'Rooms', alt: 'Pondicherry beach resort room panorama with wraparound sea-view windows' },
+  { name: 'room-pano', cat: 'Rooms', alt: 'Beach house room panorama with wraparound sea-view windows' },
   { name: 'room-interior', cat: 'Rooms', alt: 'Cozy sea view room bedroom interior at Sai Ranga Shores' },
   { name: 'window-view', cat: 'Rooms', alt: 'Sea view room window view of coconut palms and turquoise waters' },
   { name: 'window-view2', cat: 'Rooms', alt: 'Sea view room panoramic ocean sit-out view' },
 
-  // 3. Sea & Beach
-  { name: 'img-0094', cat: 'Sea & Beach', alt: 'Pondicherry beach resort photos: sweeping coastline with fishing boats and waves' },
-  { name: 'img-0414', cat: 'Sea & Beach', alt: 'Coastal motorboat excursion ride across the blue sea in Pondicherry' },
-  { name: 'img-0411', cat: 'Sea & Beach', alt: 'Catamaran boat cruising through coastal waves near Pondicherry on ECR' },
-  { name: 'img-0113', cat: 'Sea & Beach', alt: 'Gentle ocean waves rolling onto quiet beach in Pondicherry' },
+  // 4. Sea & Beach
+  { name: 'img-0094', cat: 'Sea & Beach', alt: 'Beach house photos: sweeping coastline with fishing boats and waves' },
+  { name: 'img-0414', cat: 'Sea & Beach', alt: 'Coastal motorboat excursion ride across the blue sea near the beach house' },
+  { name: 'img-0411', cat: 'Sea & Beach', alt: 'Catamaran boat cruising through coastal waves near the beach house on ECR' },
+  { name: 'img-0113', cat: 'Sea & Beach', alt: 'Gentle ocean waves rolling onto quiet beach near the beach house' },
   { name: 'img-0406', cat: 'Sea & Beach', alt: 'Coastal seabird gliding above gentle ocean waves' },
   { name: 'img-0409', cat: 'Sea & Beach', alt: 'Seagulls soaring over the azure coastline' },
   { name: 'img-4943', cat: 'Sea & Beach', alt: 'Swaying coconut palms framing quiet beach near Sai Ranga Shores' },
-  { name: 'beach-pano', cat: 'Sea & Beach', alt: 'Quiet Pondicherry beach stay shoreline with traditional fishing catamarans' },
+  { name: 'beach-pano', cat: 'Sea & Beach', alt: 'Quiet beach house shoreline with traditional fishing catamarans' },
   { name: 'waves', cat: 'Sea & Beach', alt: 'Turquoise ocean surf rolling onto peaceful beach' },
 
-  // 4. Sunrise & Sunset
-  { name: 'img-9386', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise photos: golden sunrise glistening across ocean horizon' },
-  { name: 'img-3413', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise photos: morning dawn reflecting on sea through palm canopy' },
-  { name: 'img-0330', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise view: golden sunbeams breaking through morning sea clouds' },
+  // 5. Sunrise & Sunset
+  { name: 'img-9386', cat: 'Sunrise & Sunset', alt: 'Beach house sunrise photos: golden sunrise glistening across ocean horizon' },
+  { name: 'img-3413', cat: 'Sunrise & Sunset', alt: 'Beach house sunrise photos: morning dawn reflecting on sea through palm canopy' },
+  { name: 'img-0330', cat: 'Sunrise & Sunset', alt: 'Beach house sunrise view: golden sunbeams breaking through morning sea clouds' },
   { name: 'img-0331', cat: 'Sunrise & Sunset', alt: 'Radiant morning sun rays over the Bay of Bengal ocean horizon' },
-  { name: 'img-2784', cat: 'Sunrise & Sunset', alt: 'Golden hour sunset over sand dunes and shoreline boat near Pondicherry on ECR' },
+  { name: 'img-2784', cat: 'Sunrise & Sunset', alt: 'Golden hour sunset over sand dunes and shoreline boat near the beach house on ECR' },
   { name: 'img-4888', cat: 'Sunrise & Sunset', alt: 'Evening sunset glow over coastal coconut palm canopy' },
-  { name: 'sunrise-sea', cat: 'Sunrise & Sunset', alt: 'Pondicherry sunrise photos: golden dawn rising over the Bay of Bengal' },
+  { name: 'sunrise-sea', cat: 'Sunrise & Sunset', alt: 'Beach house sunrise photos: golden dawn rising over the Bay of Bengal' },
   { name: 'sunset-dunes', cat: 'Sunrise & Sunset', alt: 'Dusk turning to embers over the coastal dunes' },
 
   // 5. Night & Moon
